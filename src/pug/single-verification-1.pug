@@ -1,0 +1,13 @@
+---
+title: EmailMarker Dashboard | Single Verification
+
+pageClassName: p-singl-verification
+---
+extends shared/_layout
+
+block footer
+block content
+	div.body.body--start(class!= pageClassName)
+
+		+subHeader('Single Verification', 'Input one email and click on the verify button')
+

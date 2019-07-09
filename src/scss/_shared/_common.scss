@@ -265,7 +265,6 @@
 	}
 }
 
-
 .balance {
 	display: flex;
 	justify-content: flex-end;
@@ -298,6 +297,70 @@
 	}
 }
 
+.heading {
+	padding-top: 120px;
+	padding-bottom: 40px;
+	@include adaptive(767) {
+		padding-bottom: 20px;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptive(767) {
+			flex-direction: column-reverse;
+		}
+
+		> div {
+			width: auto;
+			@include adaptive(767) {
+				width: 100%;
+
+				&:nth-of-type(1) {
+					padding-top: 20px;
+				}
+			}
+		}
+	}
+
+	&__title {
+		color: #000000;
+		font-size: 24px;
+	}
+
+	&__subtitle {
+		color: #b9cfdb;
+		font-size: 13px;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 140px;
+		height: 29px;
+		padding: 5px 10px;
+		border-radius: 3px;
+		background-color: #ffffff;
+		box-shadow: 0 0 14px 0 rgba(#537097, 0.06);
+		@include transition(color, box-shadow);
+		@include adaptive(767) {
+			margin-left: auto;
+		}
+
+		&:hover {
+			box-shadow: 0 0 14px 0 rgba(#537097, 0.1);
+			color: #000000;
+			@include transition(color, box-shadow);
+		}
+
+		span {
+			padding-left: 5px;
+		}
+	}
+}
 
 @keyframes fadeIn {
 	from {

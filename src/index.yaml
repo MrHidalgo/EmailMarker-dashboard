@@ -4,3 +4,21 @@ PageList:
 - file: index.html
   titleName: Home
   ready: 1
+- file: account.html
+  titleName: Account
+  ready: 1
+- file: single-verification-1.html
+  titleName: Single Verification (SV)
+  ready: 1
+- file: single-verification-2.html
+  titleName: SV - Enter Email
+  ready: 1
+- file: single-verification-3.html
+  titleName: SV - Valid
+  ready: 1
+- file: single-verification-4.html
+  titleName: SV - Invalid
+  ready: 1
+- file: single-verification-5.html
+  titleName: SV - Accept All
+  ready: 1

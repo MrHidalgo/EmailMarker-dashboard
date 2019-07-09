@@ -12,4 +12,18 @@ include ./_mixin/_modal
 include ./_mixin/_nav
 include ./_mixin/_form
 
+
+mixin subHeader(title, subtitle)
+	.heading
+		.c-grid
+			.heading__wrapper
+				div
+					p.heading__title!= title
+					p.heading__subtitle!= subtitle
+				div
+					a.heading__btn(href="#" class="" title="")
+						i.icon-font.icon-book
+						span!= "Documentation"
+
+
 //- MIXIN :: END
