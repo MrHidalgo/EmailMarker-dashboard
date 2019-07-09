@@ -24,6 +24,9 @@
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
+			@include adaptive(1199) {
+				display: none;
+			}
 
 			> div {
 				height: 100%;
@@ -47,9 +50,21 @@
 		}
 
 		&-profile {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
 			max-width: 270px;
 			padding-right: 28px;
 			border-left: 1px solid #EEEFF3;
+			@include adaptive(1199) {
+				justify-content: space-between;
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+				border-left: none;
+				padding-right: 20px;
+				padding-left: 20px;
+			}
 		}
 	}
 }

@@ -40,20 +40,28 @@ header#header.header
 						p!= "2328934 <i>| Emails</i>"
 
 		.header__wrapper-col.header__wrapper-profile
+			div
 
-			.profile
-				.profile__dropdown
-					.profile__dropdown-btn(class="" title="")
-						div
-							p.profile__dropdown-name!= "Youssef Ait"
-							span.profile__dropdown-status!= "<i class='profile__dropdown-ind'></i> Available"
-						div(dropdown-profile-js)
-							.profile__dropdown-img
-								img(src="img/img-profile.jpg" srcset="img/img-profile@2x.jpg 2x" alt="" title="")
-							i.profile__dropdown-corner
+				.hamburger
+					a.hamburger__btn(href="#" class="" title="")
+						span
+						span
+						span
 
-					.profile__dropdown-container
-						a(href="#" class="" title="")!= "My Profile"
-						a(href="#" class="" title="")!= "Log-Out"
+			div
+				.profile
+					.profile__dropdown
+						.profile__dropdown-btn(class="" title="")
+							div
+								p.profile__dropdown-name!= "Youssef Ait"
+								span.profile__dropdown-status!= "<i class='profile__dropdown-ind'></i> Available"
+							div(dropdown-profile-js)
+								.profile__dropdown-img
+									img(src="img/img-profile.jpg" srcset="img/img-profile@2x.jpg 2x" alt="" title="")
+								i.profile__dropdown-corner
+
+						.profile__dropdown-container
+							a(href="#" class="" title="")!= "My Profile"
+							a(href="#" class="" title="")!= "Log-Out"
 
 // HEADER :: END
