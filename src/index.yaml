@@ -22,3 +22,30 @@ PageList:
 - file: single-verification-5.html
   titleName: SV - Accept All
   ready: 1
+- file: bulk-verification-1.html
+  titleName: Bulk Verification - 2
+  ready: 1
+- file: bulk-verification-2.html
+  titleName: Bulk Verification - 3
+  ready: 1
+- file: bulk-verification-3.html
+  titleName: Bulk Verification - 4
+  ready: 1
+- file: api-1.html
+  titleName: API - 1
+  ready: 1
+- file: api-2.html
+  titleName: API - 2
+  ready: 1
+- file: deal-1.html
+  titleName: Deal - 1
+  ready: 1
+- file: deal-2.html
+  titleName: Deal - 2
+  ready: 1
+- file: buy.html
+  titleName: Buy
+  ready: 1
+- file: order.html
+  titleName: Order
+  ready: 1

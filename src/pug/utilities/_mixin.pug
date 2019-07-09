@@ -19,7 +19,8 @@ mixin subHeader(title, subtitle)
 			.heading__wrapper
 				div
 					p.heading__title!= title
-					p.heading__subtitle!= subtitle
+					if(subtitle)
+						p.heading__subtitle!= subtitle
 				div
 					a.heading__btn(href="#" class="" title="")
 						i.icon-font.icon-book
