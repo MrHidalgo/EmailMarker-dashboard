@@ -103,6 +103,18 @@ var initWebFontLoader = function initWebFontLoader() {
 		});
 	};
 
+	var initMobileMenu = function initMobileMenu() {
+		$('[hamburger-js]').on('click', function (ev) {
+			$('html, body').addClass('is-hideScroll');
+			$('[mobile-container-js]').addClass('is-open');
+		});
+
+		$('[mobile-close-js]').on('click', function (ev) {
+			$('html, body').removeClass('is-hideScroll');
+			$('[mobile-container-js]').removeClass('is-open');
+		});
+	};
+
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -126,6 +138,7 @@ var initWebFontLoader = function initWebFontLoader() {
 		initClickBody();
 		initHeaderProfileDropdown();
 		initHeaderNavBtn();
+		initMobileMenu();
 		// ==========================================
 	};
 	initNative();

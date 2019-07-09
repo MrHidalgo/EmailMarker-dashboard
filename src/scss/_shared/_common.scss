@@ -23,10 +23,27 @@
 	@include adaptive(1365) {
 		padding-left: 23px;
 	}
+	@include adaptive(1199) {
+		flex-direction: column;
+		padding-left: 0;
+	}
+
+	&__title {
+		display: none;
+		@include adaptive(1199) {
+			display: block;
+			padding-bottom: 22px;
+			color: #8995c7;
+			font-size: 32px;
+		}
+	}
 
 	&__list {
 		display: flex;
 		height: 100%;
+		@include adaptive(1199) {
+			flex-direction: column;
+		}
 
 		&-item {
 			padding-right: 30px;
@@ -43,6 +60,14 @@
 				height: 100%;
 				color: #537097;
 				@include transition(color);
+				@include adaptive(1199) {
+					min-height: 40px;
+					font-size: 22px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					margin-top: 5px;
+					margin-bottom: 5px;
+				}
 
 				&:hover {
 					color: #000000;
@@ -71,6 +96,9 @@
 					height: 3px;
 					background-color: #51c4fb;
 					@include transition(opacity, transform);
+					@include adaptive(1199) {
+						display: none;
+					}
 				}
 
 				img {
@@ -97,7 +125,7 @@
 		span {
 			position: absolute;
 			height: 4px;
-			border-radius: 2em;
+			border-radius: 25px;
 			background-color: #537097;
 
 			&:nth-of-type(1) {

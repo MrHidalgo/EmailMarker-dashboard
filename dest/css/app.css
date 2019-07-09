@@ -63,18 +63,20 @@ body {
 /* line 6, src/scss/_shared/_main-setting-reset.scss */
 html.is-hideScroll,
 body.is-hideScroll {
-  position: fixed;
-  width: 100%;
   overflow: hidden !important;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: unset;
 }
 
-/* line 14, src/scss/_shared/_main-setting-reset.scss */
+/* line 16, src/scss/_shared/_main-setting-reset.scss */
 html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 20, src/scss/_shared/_main-setting-reset.scss */
+/* line 22, src/scss/_shared/_main-setting-reset.scss */
 body {
   overflow-x: hidden;
   position: relative;
@@ -90,7 +92,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 35, src/scss/_shared/_main-setting-reset.scss */
+/* line 37, src/scss/_shared/_main-setting-reset.scss */
 body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -104,7 +106,7 @@ body {
   min-height: 100vh;
 }
 
-/* line 40, src/scss/_shared/_main-setting-reset.scss */
+/* line 42, src/scss/_shared/_main-setting-reset.scss */
 body > .body {
   overflow-x: hidden;
   display: -webkit-box;
@@ -126,7 +128,7 @@ body > .body {
           flex: 1 0 auto;
 }
 
-/* line 47, src/scss/_shared/_main-setting-reset.scss */
+/* line 49, src/scss/_shared/_main-setting-reset.scss */
 body > .body--start {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
@@ -134,19 +136,19 @@ body > .body--start {
           justify-content: flex-start;
 }
 
-/* line 54, src/scss/_shared/_main-setting-reset.scss */
+/* line 56, src/scss/_shared/_main-setting-reset.scss */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 57, src/scss/_shared/_main-setting-reset.scss */
+/* line 59, src/scss/_shared/_main-setting-reset.scss */
 *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 64, src/scss/_shared/_main-setting-reset.scss */
+/* line 66, src/scss/_shared/_main-setting-reset.scss */
 button,
 input,
 optgroup,
@@ -156,36 +158,36 @@ textarea {
   margin: 0;
 }
 
-/* line 74, src/scss/_shared/_main-setting-reset.scss */
+/* line 76, src/scss/_shared/_main-setting-reset.scss */
 button,
 input {
   overflow: visible;
 }
 
-/* line 80, src/scss/_shared/_main-setting-reset.scss */
+/* line 82, src/scss/_shared/_main-setting-reset.scss */
 button[disabled] {
   opacity: 0.55;
   cursor: not-allowed;
 }
 
-/* line 86, src/scss/_shared/_main-setting-reset.scss */
+/* line 88, src/scss/_shared/_main-setting-reset.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-/* line 92, src/scss/_shared/_main-setting-reset.scss */
+/* line 94, src/scss/_shared/_main-setting-reset.scss */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 98, src/scss/_shared/_main-setting-reset.scss */
+/* line 100, src/scss/_shared/_main-setting-reset.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 103, src/scss/_shared/_main-setting-reset.scss */
+/* line 105, src/scss/_shared/_main-setting-reset.scss */
 p,
 h1, h2, h3, h4, h5, h6,
 hr {
@@ -193,36 +195,36 @@ hr {
   padding: 0;
 }
 
-/* line 111, src/scss/_shared/_main-setting-reset.scss */
+/* line 113, src/scss/_shared/_main-setting-reset.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 115, src/scss/_shared/_main-setting-reset.scss */
+/* line 117, src/scss/_shared/_main-setting-reset.scss */
 ul li {
   list-style: none;
 }
 
-/* line 121, src/scss/_shared/_main-setting-reset.scss */
+/* line 123, src/scss/_shared/_main-setting-reset.scss */
 a {
   outline: none;
   text-decoration: none;
 }
 
-/* line 125, src/scss/_shared/_main-setting-reset.scss */
+/* line 127, src/scss/_shared/_main-setting-reset.scss */
 a:hover, a:focus {
   text-decoration: none;
 }
 
-/* line 132, src/scss/_shared/_main-setting-reset.scss */
+/* line 134, src/scss/_shared/_main-setting-reset.scss */
 input[type="text"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-/* line 136, src/scss/_shared/_main-setting-reset.scss */
+/* line 138, src/scss/_shared/_main-setting-reset.scss */
 picture {
   display: -webkit-box;
   display: -webkit-flex;
@@ -338,7 +340,34 @@ picture {
   }
 }
 
-/* line 27, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1199px) {
+  /* line 19, src/scss/_shared/_common.scss */
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+  }
+}
+
+/* line 31, src/scss/_shared/_common.scss */
+.nav__title {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  /* line 31, src/scss/_shared/_common.scss */
+  .nav__title {
+    display: block;
+    padding-bottom: 22px;
+    color: #8995c7;
+    font-size: 32px;
+  }
+}
+
+/* line 41, src/scss/_shared/_common.scss */
 .nav__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -347,19 +376,30 @@ picture {
   height: 100%;
 }
 
-/* line 31, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1199px) {
+  /* line 41, src/scss/_shared/_common.scss */
+  .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 48, src/scss/_shared/_common.scss */
 .nav__list-item {
   padding-right: 30px;
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 31, src/scss/_shared/_common.scss */
+  /* line 48, src/scss/_shared/_common.scss */
   .nav__list-item {
     padding-right: 23px;
   }
 }
 
-/* line 37, src/scss/_shared/_common.scss */
+/* line 54, src/scss/_shared/_common.scss */
 .nav__list-item a {
   overflow: hidden;
   white-space: nowrap;
@@ -379,7 +419,19 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 47, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1199px) {
+  /* line 54, src/scss/_shared/_common.scss */
+  .nav__list-item a {
+    min-height: 40px;
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+/* line 72, src/scss/_shared/_common.scss */
 .nav__list-item a:hover {
   color: #000000;
   -webkit-transition: color 0.3s ease-in-out;
@@ -387,7 +439,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 52, src/scss/_shared/_common.scss */
+/* line 77, src/scss/_shared/_common.scss */
 .nav__list-item a.is-active {
   color: #000000;
   -webkit-transition: color 0.3s ease-in-out;
@@ -395,7 +447,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 56, src/scss/_shared/_common.scss */
+/* line 81, src/scss/_shared/_common.scss */
 .nav__list-item a.is-active:after {
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -408,7 +460,7 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 63, src/scss/_shared/_common.scss */
+/* line 88, src/scss/_shared/_common.scss */
 .nav__list-item a:after {
   opacity: 0;
   content: '';
@@ -429,18 +481,25 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 76, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1199px) {
+  /* line 88, src/scss/_shared/_common.scss */
+  .nav__list-item a:after {
+    display: none;
+  }
+}
+
+/* line 104, src/scss/_shared/_common.scss */
 .nav__list-item a img {
   margin-right: 5px;
 }
 
-/* line 84, src/scss/_shared/_common.scss */
+/* line 112, src/scss/_shared/_common.scss */
 .hamburger {
   display: none;
 }
 
 @media screen and (max-width: 1199px) {
-  /* line 84, src/scss/_shared/_common.scss */
+  /* line 112, src/scss/_shared/_common.scss */
   .hamburger {
     display: -webkit-box;
     display: -webkit-flex;
@@ -449,7 +508,7 @@ picture {
   }
 }
 
-/* line 90, src/scss/_shared/_common.scss */
+/* line 118, src/scss/_shared/_common.scss */
 .hamburger__btn {
   position: relative;
   display: -webkit-box;
@@ -464,23 +523,23 @@ picture {
   height: 22px;
 }
 
-/* line 97, src/scss/_shared/_common.scss */
+/* line 125, src/scss/_shared/_common.scss */
 .hamburger__btn span {
   position: absolute;
   height: 4px;
-  -webkit-border-radius: 2em;
-          border-radius: 2em;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
   background-color: #537097;
 }
 
-/* line 103, src/scss/_shared/_common.scss */
+/* line 131, src/scss/_shared/_common.scss */
 .hamburger__btn span:nth-of-type(1) {
   top: 0;
   left: 0;
   width: 60%;
 }
 
-/* line 109, src/scss/_shared/_common.scss */
+/* line 137, src/scss/_shared/_common.scss */
 .hamburger__btn span:nth-of-type(2) {
   top: 50%;
   left: 0;
@@ -490,14 +549,14 @@ picture {
   width: 100%;
 }
 
-/* line 116, src/scss/_shared/_common.scss */
+/* line 144, src/scss/_shared/_common.scss */
 .hamburger__btn span:nth-of-type(3) {
   bottom: 0;
   right: 0;
   width: 60%;
 }
 
-/* line 125, src/scss/_shared/_common.scss */
+/* line 153, src/scss/_shared/_common.scss */
 .profile {
   display: -webkit-box;
   display: -webkit-flex;
@@ -514,12 +573,12 @@ picture {
   min-height: 100%;
 }
 
-/* line 131, src/scss/_shared/_common.scss */
+/* line 159, src/scss/_shared/_common.scss */
 .profile__dropdown {
   position: relative;
 }
 
-/* line 134, src/scss/_shared/_common.scss */
+/* line 162, src/scss/_shared/_common.scss */
 .profile__dropdown-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -531,7 +590,7 @@ picture {
           align-items: center;
 }
 
-/* line 138, src/scss/_shared/_common.scss */
+/* line 166, src/scss/_shared/_common.scss */
 .profile__dropdown-btn > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -543,7 +602,7 @@ picture {
           align-items: center;
 }
 
-/* line 142, src/scss/_shared/_common.scss */
+/* line 170, src/scss/_shared/_common.scss */
 .profile__dropdown-btn > div:nth-of-type(1) {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -557,12 +616,12 @@ picture {
   padding-right: 25px;
 }
 
-/* line 148, src/scss/_shared/_common.scss */
+/* line 176, src/scss/_shared/_common.scss */
 .profile__dropdown-btn > div:nth-of-type(2) {
   cursor: pointer;
 }
 
-/* line 154, src/scss/_shared/_common.scss */
+/* line 182, src/scss/_shared/_common.scss */
 .profile__dropdown-name {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -572,7 +631,7 @@ picture {
   color: #537097;
 }
 
-/* line 162, src/scss/_shared/_common.scss */
+/* line 190, src/scss/_shared/_common.scss */
 .profile__dropdown-status {
   display: -webkit-box;
   display: -webkit-flex;
@@ -585,7 +644,7 @@ picture {
   color: #b9cfdb;
 }
 
-/* line 168, src/scss/_shared/_common.scss */
+/* line 196, src/scss/_shared/_common.scss */
 .profile__dropdown-ind {
   display: -webkit-box;
   display: -webkit-flex;
@@ -599,7 +658,7 @@ picture {
   background-color: #41dcc7;
 }
 
-/* line 177, src/scss/_shared/_common.scss */
+/* line 205, src/scss/_shared/_common.scss */
 .profile__dropdown-img {
   overflow: hidden;
   position: relative;
@@ -609,7 +668,7 @@ picture {
           border-radius: 50%;
 }
 
-/* line 189, src/scss/_shared/_common.scss */
+/* line 217, src/scss/_shared/_common.scss */
 .profile__dropdown-corner {
   -webkit-transform: translateY(3px);
       -ms-transform: translateY(3px);
@@ -622,7 +681,7 @@ picture {
   border-color: #B9CFDB transparent transparent transparent;
 }
 
-/* line 199, src/scss/_shared/_common.scss */
+/* line 227, src/scss/_shared/_common.scss */
 .profile__dropdown-container {
   display: none;
   position: absolute;
@@ -648,7 +707,7 @@ picture {
           animation-name: fadeOut;
 }
 
-/* line 214, src/scss/_shared/_common.scss */
+/* line 242, src/scss/_shared/_common.scss */
 .is-open .profile__dropdown-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -662,7 +721,7 @@ picture {
           animation-name: fadeIn;
 }
 
-/* line 221, src/scss/_shared/_common.scss */
+/* line 249, src/scss/_shared/_common.scss */
 .profile__dropdown-container > a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -683,13 +742,13 @@ picture {
   font-size: 12px;
 }
 
-/* line 231, src/scss/_shared/_common.scss */
+/* line 259, src/scss/_shared/_common.scss */
 .profile__dropdown-container > a:last-of-type {
   border-bottom: none;
   color: #fe95b3;
 }
 
-/* line 241, src/scss/_shared/_common.scss */
+/* line 269, src/scss/_shared/_common.scss */
 .balance {
   display: -webkit-box;
   display: -webkit-flex;
@@ -703,7 +762,7 @@ picture {
   padding-right: 23px;
 }
 
-/* line 247, src/scss/_shared/_common.scss */
+/* line 275, src/scss/_shared/_common.scss */
 .balance h6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -715,20 +774,20 @@ picture {
           align-items: center;
 }
 
-/* line 252, src/scss/_shared/_common.scss */
+/* line 280, src/scss/_shared/_common.scss */
 .balance h6 span {
   padding-right: 5px;
   color: #b9cfdb;
 }
 
-/* line 257, src/scss/_shared/_common.scss */
+/* line 285, src/scss/_shared/_common.scss */
 .balance h6 p {
   color: #000000;
   font-size: 18px;
   line-height: 1;
 }
 
-/* line 262, src/scss/_shared/_common.scss */
+/* line 290, src/scss/_shared/_common.scss */
 .balance h6 p i {
   position: relative;
   top: -1px;
@@ -823,23 +882,76 @@ picture {
 @media screen and (max-width: 1199px) {
   /* line 20, src/scss/_components/_header.scss */
   .header__wrapper-mobile {
-    display: none;
+    z-index: 1002;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: -webkit-calc(100% - 72px);
+    width: calc(100% - 72px);
+    height: 100%;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    padding: 65px 35px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 20px rgba(29, 38, 74, 0.4);
+            box-shadow: 0 0 20px rgba(29, 38, 74, 0.4);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+  /* line 41, src/scss/_components/_header.scss */
+  .header__wrapper-mobile.is-open {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
 }
 
-/* line 31, src/scss/_components/_header.scss */
+@media screen and (max-width: 424px) {
+  /* line 20, src/scss/_components/_header.scss */
+  .header__wrapper-mobile {
+    width: -webkit-calc(100% - 50px);
+    width: calc(100% - 50px);
+  }
+}
+
+/* line 50, src/scss/_components/_header.scss */
 .header__wrapper-mobile > div {
   height: 100%;
 }
 
-/* line 36, src/scss/_components/_header.scss */
+/* line 54, src/scss/_components/_header.scss */
+.header__wrapper-mobile-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 63, src/scss/_components/_header.scss */
 .header__wrapper-logo {
   max-width: 70px;
   min-height: 100%;
   border-right: 1px solid #EEEFF3;
 }
 
-/* line 42, src/scss/_components/_header.scss */
+/* line 69, src/scss/_components/_header.scss */
 .header__wrapper-nav {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -849,12 +961,19 @@ picture {
   max-width: 100%;
 }
 
-/* line 48, src/scss/_components/_header.scss */
+/* line 75, src/scss/_components/_header.scss */
 .header__wrapper-balance {
   max-width: 270px;
 }
 
-/* line 52, src/scss/_components/_header.scss */
+@media screen and (max-width: 1199px) {
+  /* line 75, src/scss/_components/_header.scss */
+  .header__wrapper-balance {
+    display: none;
+  }
+}
+
+/* line 82, src/scss/_components/_header.scss */
 .header__wrapper-profile {
   display: -webkit-box;
   display: -webkit-flex;
@@ -874,7 +993,7 @@ picture {
 }
 
 @media screen and (max-width: 1199px) {
-  /* line 52, src/scss/_components/_header.scss */
+  /* line 82, src/scss/_components/_header.scss */
   .header__wrapper-profile {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;

@@ -25,11 +25,38 @@
 			min-width: 1px;
 			max-width: 100%;
 			@include adaptive(1199) {
-				display: none;
+				z-index: 1002;
+				overflow-y: auto;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: calc(100% - 72px);
+				height: 100%;
+				transform: translateX(-100%);
+				padding: 65px 35px;
+				background-color: #ffffff;
+				box-shadow: 0 0 20px rgba(#1D264A, 0.4);
+				@include transition(transform);
+
+				&.is-open {
+					transform: translateX(0);
+					@include transition(transform);
+				}
+			}
+			@include adaptive(424) {
+				width: calc(100% - 50px);
 			}
 
 			> div {
 				height: 100%;
+			}
+
+			&-close {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				display: flex;
+				align-items: center;
 			}
 		}
 
@@ -47,6 +74,9 @@
 
 		&-balance {
 			max-width: 270px;
+			@include adaptive(1199) {
+				display: none;
+			}
 		}
 
 		&-profile {

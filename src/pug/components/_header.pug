@@ -9,11 +9,16 @@ header#header.header
 				a.logo__btn(href="/" class="" title="")
 					img.logo__img(src="img/logo.svg" alt="" title="")
 
-		.header__wrapper-col.header__wrapper-mobile
+		.header__wrapper-col.header__wrapper-mobile(mobile-container-js)
+			
+			a.header__wrapper-mobile-close(href="#" class="" title="" mobile-close-js)
+				img(src="img/img-close.svg" alt="" title="")
 
 			.header__wrapper-col.header__wrapper-nav
 
 				.nav
+					p.nav__title!= "Menu"
+
 					ul.nav__list
 						li.nav__list-item
 							a.is-active(href="#" class="" title="" header-navBtn-js)!= "Dashboard"
@@ -43,7 +48,7 @@ header#header.header
 			div
 
 				.hamburger
-					a.hamburger__btn(href="#" class="" title="")
+					a.hamburger__btn(href="#" class="" title="" hamburger-js)
 						span
 						span
 						span

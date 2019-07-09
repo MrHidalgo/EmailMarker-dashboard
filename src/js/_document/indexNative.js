@@ -31,6 +31,19 @@
 		});
 	};
 
+
+	const initMobileMenu = () => {
+		$('[hamburger-js]').on('click', (ev) => {
+			$('html, body').addClass('is-hideScroll');
+			$('[mobile-container-js]').addClass('is-open');
+		});
+
+		$('[mobile-close-js]').on('click', (ev) => {
+			$('html, body').removeClass('is-hideScroll');
+			$('[mobile-container-js]').removeClass('is-open');
+		});
+	};
+
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -55,6 +68,7 @@
 		initClickBody();
 		initHeaderProfileDropdown();
 		initHeaderNavBtn();
+		initMobileMenu();
 		// ==========================================
 	};
 	initNative();
