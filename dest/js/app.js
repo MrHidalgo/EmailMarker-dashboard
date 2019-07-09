@@ -22,16 +22,16 @@
  */
 var initPreventBehavior = function initPreventBehavior() {
 
-  var link = document.querySelectorAll("a");
+	var link = document.querySelectorAll("a");
 
-  link.forEach(function (val, idx) {
+	link.forEach(function (val, idx) {
 
-    val.addEventListener("click", function (e) {
-      if (val.getAttribute("href") === "#") {
-        e.preventDefault();
-      }
-    });
-  });
+		val.addEventListener("click", function (e) {
+			if (val.getAttribute("href") === "#") {
+				e.preventDefault();
+			}
+		});
+	});
 };
 
 /**
@@ -41,7 +41,7 @@ var initPreventBehavior = function initPreventBehavior() {
  */
 var initSvg4everybody = function initSvg4everybody() {
 
-  svg4everybody();
+	svg4everybody();
 };
 
 /**
@@ -51,57 +51,82 @@ var initSvg4everybody = function initSvg4everybody() {
  */
 var initWebFontLoader = function initWebFontLoader() {
 
-  /**
-    * @description
-   */
-  // WebFont.load({
-  //   google: {
-  //     families: [
-  //       'Roboto:100,300,400,500,700,900'
-  //     ]
-  //   }
-  // });
+	/**
+   * @description
+  */
+	// WebFont.load({
+	//   google: {
+	//     families: [
+	//       'Roboto:100,300,400,500,700,900'
+	//     ]
+	//   }
+	// });
 
-  /**
-    * @description
-   */
-  var WebFontConfig = {
-    custom: {
-      families: ['SFCompactText:n2,n4,n5,n6,n7,n9']
-    }
-  };
+	/**
+   * @description
+  */
+	var WebFontConfig = {
+		custom: {
+			families: ['SFCompactText:n2,n4,n5,n6,n7,n9']
+		}
+	};
 };
 
 /**
  * @description Document DOM ready.
  */
 (function () {
-  /*
-  * =============================================
-  * CALLBACK :: start
-  * ============================================= */
+	/*
+ * =============================================
+ * CALLBACK :: start
+ * ============================================= */
+	var initClickBody = function initClickBody() {
+		$('body').on('click', function (e) {
+			var className = ".profile__dropdown";
 
-  /*
-  * CALLBACK :: end
-  * ============================================= */
+			if (!$(e.target).closest(className).length) {
+				$('.profile__dropdown').removeClass('is-open');
+			}
+		});
+	};
 
-  /**
-   * @name initNative
-   *
-   * @description Init all method
-   */
-  var initNative = function initNative() {
-    // default
-    initWebFontLoader();
-    initPreventBehavior();
-    initSvg4everybody();
-    // ==========================================
+	var initHeaderProfileDropdown = function initHeaderProfileDropdown() {
+		$('[dropdown-profile-js]').on('click', function (ev) {
+			$(ev.currentTarget).closest('.profile__dropdown').toggleClass('is-open');
+		});
+	};
 
-    // lib
-    // ==========================================
+	var initHeaderNavBtn = function initHeaderNavBtn() {
+		$('[header-navBtn-js]').on('click', function (ev) {
+			$('[header-navBtn-js]').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+		});
+	};
 
-    // callback
-    // ==========================================
-  };
-  initNative();
+	/*
+ * CALLBACK :: end
+ * ============================================= */
+
+	/**
+  * @name initNative
+  *
+  * @description Init all method
+  */
+	var initNative = function initNative() {
+		// default
+		initWebFontLoader();
+		initPreventBehavior();
+		initSvg4everybody();
+		// ==========================================
+
+		// lib
+		// ==========================================
+
+		// callback
+		initClickBody();
+		initHeaderProfileDropdown();
+		initHeaderNavBtn();
+		// ==========================================
+	};
+	initNative();
 })();

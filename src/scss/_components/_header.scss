@@ -1,5 +1,57 @@
 // HEADER :: START
 
-.header {}
+.header {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #ffffff;
+	border-bottom: 1px solid #EEEFF3;
+
+	&__wrapper {
+		display: flex;
+		height: 72px;
+
+		&-col {
+			width: 100%;
+		}
+
+		&-mobile {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+
+			> div {
+				height: 100%;
+			}
+		}
+
+		&-logo {
+			max-width: 70px;
+			min-height: 100%;
+			border-right: 1px solid #EEEFF3;
+		}
+
+		&-nav {
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+		}
+
+		&-balance {
+			max-width: 270px;
+		}
+
+		&-profile {
+			max-width: 270px;
+			padding-right: 28px;
+			border-left: 1px solid #EEEFF3;
+		}
+	}
+}
 
 // HEADER :: END

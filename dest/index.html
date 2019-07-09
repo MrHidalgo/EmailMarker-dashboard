@@ -34,19 +34,51 @@
   <body>
     <!-- HEADER :: START-->
     <header class="header" id="header">
-      <div class="c-grid">
-        <div class="header__wrapper"></div>
+      <div class="header__wrapper">
+        <div class="header__wrapper-col header__wrapper-logo">
+          <div class="logo"><a class="logo__btn" href="/" title=""><img class="logo__img" src="img/logo.svg" alt="" title=""></a></div>
+        </div>
+        <div class="header__wrapper-col header__wrapper-mobile">
+          <div class="header__wrapper-col header__wrapper-nav">
+            <div class="nav">
+              <ul class="nav__list">
+                <li class="nav__list-item"><a class="is-active" href="#" title="" header-navBtn-js>Dashboard</a></li>
+                <li class="nav__list-item"><a href="#" title="" header-navBtn-js>Single Verification</a></li>
+                <li class="nav__list-item"><a href="#" title="" header-navBtn-js>Bulk Verification</a></li>
+                <li class="nav__list-item"><a href="#" title="" header-navBtn-js>Api</a></li>
+                <li class="nav__list-item"><a href="#" title="" header-navBtn-js><img src="img/img-heart.svg" alt="" title="" header-navBtn-js><span>Today’s Deal</span></a></li>
+                <li class="nav__list-item"><a href="#" title="" header-navBtn-js>Buy</a></li>
+                <li class="nav__list-item"><a href="#" title="" header-navBtn-js>My Orders</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__wrapper-col header__wrapper-balance">
+            <div class="balance">
+              <h6><span>Balance: </span>
+                <p>2328934 <i>| Emails</i></p>
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="header__wrapper-col header__wrapper-profile">
+          <div class="profile">
+            <div class="profile__dropdown">
+              <div class="profile__dropdown-btn" title="">
+                <div>
+                  <p class="profile__dropdown-name">Youssef Ait</p><span class="profile__dropdown-status"><i class='profile__dropdown-ind'></i> Available</span>
+                </div>
+                <div dropdown-profile-js>
+                  <div class="profile__dropdown-img"><img src="img/img-profile.jpg" srcset="img/img-profile@2x.jpg 2x" alt="" title=""></div><i class="profile__dropdown-corner"></i>
+                </div>
+              </div>
+              <div class="profile__dropdown-container"><a href="#" title="">My Profile</a><a href="#" title="">Log-Out</a></div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- HEADER :: END-->
     <div class="body body--start p-home"></div>
-    <!-- FOOTER :: START-->
-    <footer class="footer" id="footer">
-      <div class="c-grid">
-        <div class="footer__wrapper"></div>
-      </div>
-    </footer>
-    <!-- FOOTER :: END-->
   </body>
   <!-- SCRIPT :: START-->
   <script src="js/vendor.js"></script>

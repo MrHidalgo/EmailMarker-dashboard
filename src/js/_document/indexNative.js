@@ -6,6 +6,30 @@
 	* =============================================
 	* CALLBACK :: start
 	* ============================================= */
+	const initClickBody = () => {
+		$('body').on('click', function (e) {
+			const className = ".profile__dropdown";
+
+			if (!$(e.target).closest(className).length) {
+				$('.profile__dropdown').removeClass('is-open');
+			}
+		});
+	};
+
+
+	const initHeaderProfileDropdown = () => {
+		$('[dropdown-profile-js]').on('click', (ev) => {
+			$(ev.currentTarget).closest('.profile__dropdown').toggleClass('is-open');
+		});
+	};
+
+
+	const initHeaderNavBtn = () => {
+		$('[header-navBtn-js]').on('click', (ev) => {
+			$('[header-navBtn-js]').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+		});
+	};
 
 	/*
 	* CALLBACK :: end
@@ -28,6 +52,9 @@
 		// ==========================================
 
 		// callback
+		initClickBody();
+		initHeaderProfileDropdown();
+		initHeaderNavBtn();
 		// ==========================================
 	};
 	initNative();

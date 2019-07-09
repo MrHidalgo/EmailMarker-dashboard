@@ -1,7 +1,59 @@
 // HEADER :: START
 
 header#header.header
-  .c-grid
-    .header__wrapper
+
+	.header__wrapper
+		.header__wrapper-col.header__wrapper-logo
+
+			.logo
+				a.logo__btn(href="/" class="" title="")
+					img.logo__img(src="img/logo.svg" alt="" title="")
+
+		.header__wrapper-col.header__wrapper-mobile
+
+			.header__wrapper-col.header__wrapper-nav
+
+				.nav
+					ul.nav__list
+						li.nav__list-item
+							a.is-active(href="#" class="" title="" header-navBtn-js)!= "Dashboard"
+						li.nav__list-item
+							a(href="#" class="" title="" header-navBtn-js)!= "Single Verification"
+						li.nav__list-item
+							a(href="#" class="" title="" header-navBtn-js)!= "Bulk Verification"
+						li.nav__list-item
+							a(href="#" class="" title="" header-navBtn-js)!= "Api"
+						li.nav__list-item
+							a(href="#" class="" title="" header-navBtn-js)
+								img(src="img/img-heart.svg" alt="" title="" header-navBtn-js)
+								span!= "Today’s Deal"
+						li.nav__list-item
+							a(href="#" class="" title="" header-navBtn-js)!= "Buy"
+						li.nav__list-item
+							a(href="#" class="" title="" header-navBtn-js)!= "My Orders"
+
+			.header__wrapper-col.header__wrapper-balance
+
+				.balance
+					h6
+						span!= "Balance: "
+						p!= "2328934 <i>| Emails</i>"
+
+		.header__wrapper-col.header__wrapper-profile
+
+			.profile
+				.profile__dropdown
+					.profile__dropdown-btn(class="" title="")
+						div
+							p.profile__dropdown-name!= "Youssef Ait"
+							span.profile__dropdown-status!= "<i class='profile__dropdown-ind'></i> Available"
+						div(dropdown-profile-js)
+							.profile__dropdown-img
+								img(src="img/img-profile.jpg" srcset="img/img-profile@2x.jpg 2x" alt="" title="")
+							i.profile__dropdown-corner
+
+					.profile__dropdown-container
+						a(href="#" class="" title="")!= "My Profile"
+						a(href="#" class="" title="")!= "Log-Out"
 
 // HEADER :: END
