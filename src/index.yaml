@@ -1,0 +1,6 @@
+ProjectTitle: EmailMarker Dashboard
+
+PageList:
+- file: index.html
+  titleName: Home
+  ready: 1
