@@ -1,0 +1,56 @@
+// SECTION single verification :: START
+
+-
+	var dataFormObj = {
+		inputName: {
+			classMod: "",
+			uniqueName: "single_verify",
+			labelVal: "",
+			inputType: "text",
+			inputClassMod: "",
+			placeholderVal: "Enter Email Address",
+			val: ""
+		}
+	};
+
+section#sv.sv
+	.c-grid
+		.sv__wrapper
+
+			form.c-form.sv__form(action='' method='' autocomplete='off' class!= (pageSubClassName === 'p-single-verification-2') ? 'is-keyup':(pageSubClassName === 'p-single-verification-3') ? 'is-valid':(pageSubClassName === 'p-single-verification-4') ? 'is-invalid':(pageSubClassName === 'p-single-verification-5') ? 'is-warning':'')
+				.sv__form-left
+
+					+formInput(dataFormObj.inputName)
+
+					.sv__form-indicate
+						p!= (pageSubClassName === 'p-single-verification-4' || pageSubClassName === 'p-single-verification-5') ? 'Invalid':'Valid'
+
+				.sv__form-right
+
+					button.sv__btn(type="button" name="") Verify
+
+				.sv__form-info
+					.sv__form-info-cover
+						.sv__form-info-col
+							div
+								i.safe
+							div
+								p!= "<span>Safe to send :</span> <strong>No</strong>"
+						.sv__form-info-col
+							div
+								i.address
+							div
+								p!= "<span>Role address :</span> <strong>No</strong>"
+						.sv__form-info-col
+							div
+								i.accept
+							div
+								p!= "<span>Accept All :</span> <strong>No</strong>"
+						.sv__form-info-col
+							div
+								i.disposable
+							div
+								p!= "<span>Disposable :</span> <strong>Yes</strong>"
+
+
+// SECTION single verification :: END

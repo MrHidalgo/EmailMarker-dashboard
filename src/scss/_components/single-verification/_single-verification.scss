@@ -1,0 +1,271 @@
+// SECTION single verification :: START
+
+.sv {
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 630px;
+		margin-left: auto;
+		margin-right: auto;
+
+		&.is-keyup,
+		&.is-valid,
+		&.is-invalid,
+		&.is-warning {
+			.sv {
+				&__form {
+					&-info {
+						opacity: 1;
+						visibility: visible;
+						@include transition(opacity);
+					}
+				}
+
+				&__btn {
+					background-color: #04c7ff;
+					box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+					color: #ffffff;
+					@include transition(background-color, box-shadow, color);
+				}
+			}
+		}
+
+		&.is-valid,
+		&.is-invalid,
+		&.is-warning {
+			.c-form__input {
+				@include transition(color);
+			}
+
+			.sv {
+				&__form {
+					&-indicate {
+						opacity: 1;
+						visibility: visible;
+						@include transition(opacity, background-color, color);
+					}
+				}
+			}
+		}
+
+		&.is-valid {
+			.c-form__input {
+				color: #41DCC7;
+			}
+
+			.sv {
+				&__form {
+					&-indicate {
+						background-color: rgba(#41dcc7, 1);
+						color: #fff;
+					}
+				}
+			}
+		}
+		&.is-invalid {
+			.c-form__input {
+				color: #FE95B3;
+			}
+
+			.sv {
+				&__form {
+					&-indicate {
+						background-color: rgba(#FE95B3, 1);
+						color: #fff;
+					}
+				}
+			}
+		}
+		&.is-warning {
+			.c-form__input {
+				color: #F4B44B;
+			}
+
+			.sv {
+				&__form {
+					&-indicate {
+						background-color: rgba(#FBD391, 1);
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		&-left {
+			position: relative;
+			width: calc(100% - (122px + 17px));
+			@include adaptive(767) {
+				width: 100%;
+			}
+		}
+
+		&-indicate {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			right: 11px;
+			top: 11px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 105px;
+			height: 28px;
+			padding: 5px 10px;
+			border-radius: 3px;
+			background-color: #eee;
+			color: #000000;
+			text-align: center;
+			@include transition(opacity, background-color, color);
+			@include adaptive(767) {
+				border-radius: 25px;
+				font-size: 13px;
+			}
+		}
+
+		&-right {
+			width: 122px;
+			@include adaptive(767) {
+				display: flex;
+				justify-content: flex-end;
+				width: 100%;
+				padding-top: 20px;
+			}
+		}
+
+		&-info {
+			opacity: 0;
+			visibility: hidden;
+			width: 100%;
+			padding-top: 50px;
+			padding-bottom: 30px;
+			@include transition(opacity);
+
+			&-cover {
+				position: relative;
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+				max-width: 369px;
+				@include adaptive(767) {
+					max-width: 150px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 2px;
+					height: 100%;
+					background-color: #eeeff3;
+					@include adaptive(767) {
+						display: none;
+					}
+				}
+			}
+
+			&-col {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				max-width: 50%;
+				@include adaptive(767) {
+					max-width: 100%;
+				}
+
+				&:nth-of-type(1),
+				&:nth-of-type(2) {
+					padding-bottom: 18px;
+				}
+
+				&:nth-of-type(2),
+				&:nth-of-type(4) {
+					padding-left: 38px;
+					@include adaptive(767) {
+						padding-left: 0;
+						padding-bottom: 18px;
+					}
+				}
+
+				&:nth-of-type(3) {
+					@include adaptive(767) {
+						padding-bottom: 18px;
+					}
+				}
+
+				> div {
+					&:nth-of-type(1) {
+						width: 24px;
+					}
+					&:nth-of-type(2) {
+						flex: 1;
+						min-width: 1px;
+						max-width: 100%;
+					}
+				}
+			}
+
+			i {
+				display: flex;
+				width: 17px;
+				height: 17px;
+				border-radius: 50%;
+
+				&.safe {
+					background-color: #41dcc7;
+				}
+				&.address {
+					background-color: #ce96ff;
+				}
+				&.accept {
+					background-color: #fbd391;
+				}
+				&.disposable {
+					background-color: #fe95b3;
+				}
+			}
+
+			p {
+				display: flex;
+				color: #537097;
+
+				span {
+					min-width: 100px;
+				}
+
+				strong {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		outline: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 122px;
+		height: 50px;
+		box-shadow: none;
+		border-radius: 3px;
+		background-color: #fff;
+		border: 1px solid #eeeff3;
+		font-size: 15px;
+		letter-spacing: 0;
+		text-align: center;
+		color: #04c7ff;
+		@include transition(background-color, box-shadow, color);
+		@include adaptive(767) {
+			border-radius: 25px;
+		}
+	}
+}
+
+// SECTION single verification :: END

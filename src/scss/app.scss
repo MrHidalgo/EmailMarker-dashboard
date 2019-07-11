@@ -39,9 +39,11 @@
 //@import "_macros/subtitle";
 //@import "_macros/btn";
 //@import "_macros/modal";
-//@import "_macros/form";
+@import "_macros/form";
 ///
 /// COMPONENTS
 /// ===============
 @import "_components/header";
-//@import "_components/footer";
+@import "_components/footer";
+
+@import "_components/single-verification/single-verification";

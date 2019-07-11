@@ -1,5 +1,21 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+	padding: 20px;
+	@include adaptive(767) {
+		display: none;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
 
 // FOOTER :: END

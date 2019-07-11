@@ -266,52 +266,60 @@ picture {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 35px;
+  padding-left: 35px;
 }
 
-/* line 20, src/scss/_shared/_grid.scss */
+@media screen and (max-width: 413px) {
+  /* line 8, src/scss/_shared/_grid.scss */
+  .c-grid, .c-grid-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* line 24, src/scss/_shared/_grid.scss */
 .c-grid {
-  max-width: 1300px;
+  max-width: 1370px;
 }
 
-/* line 27, src/scss/_shared/_grid.scss */
+/* line 31, src/scss/_shared/_grid.scss */
 .c-grid-fluid {
   max-width: 100%;
 }
 
 @media screen and (min-width: 576px) {
-  /* line 35, src/scss/_shared/_grid.scss */
+  /* line 39, src/scss/_shared/_grid.scss */
   .c-grid {
-    max-width: 1300px;
+    max-width: 1370px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  /* line 35, src/scss/_shared/_grid.scss */
+  /* line 39, src/scss/_shared/_grid.scss */
   .c-grid {
-    max-width: 1300px;
+    max-width: 1370px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 35, src/scss/_shared/_grid.scss */
+  /* line 39, src/scss/_shared/_grid.scss */
   .c-grid {
-    max-width: 1300px;
+    max-width: 1370px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  /* line 35, src/scss/_shared/_grid.scss */
+  /* line 39, src/scss/_shared/_grid.scss */
   .c-grid {
-    max-width: 1300px;
+    max-width: 1370px;
   }
 }
 
 @media screen and (min-width: 1366px) {
-  /* line 35, src/scss/_shared/_grid.scss */
+  /* line 39, src/scss/_shared/_grid.scss */
   .c-grid {
-    max-width: 1300px;
+    max-width: 1370px;
   }
 }
 
@@ -988,6 +996,877 @@ picture {
   line-height: 1;
 }
 
+/* line 103, src/scss/_macros/_form.scss */
+.c-form {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 113, src/scss/_macros/_form.scss */
+.c-form__group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 117, src/scss/_macros/_form.scss */
+.c-form__group--two, .c-form__group--three {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 123, src/scss/_macros/_form.scss */
+.c-form__group--two .c-form__group-col {
+  width: -webkit-calc((100% - 15px) / 2);
+  width: calc((100% - 15px) / 2);
+}
+
+/* line 129, src/scss/_macros/_form.scss */
+.c-form__group--three .c-form__group-col {
+  width: -webkit-calc((100% - 15px) / 3);
+  width: calc((100% - 15px) / 3);
+}
+
+/* line 141, src/scss/_macros/_form.scss */
+.c-form__field {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+}
+
+/* line 151, src/scss/_macros/_form.scss */
+.c-form__field.is-error .c-form__notify, .c-form__field.is-invalid .c-form__notify, .c-form__field.is-warning .c-form__notify, .c-form__field.is-info .c-form__notify {
+  display: block;
+}
+
+/* line 154, src/scss/_macros/_form.scss */
+.c-form__field.is-error .c-form__label, .c-form__field.is-invalid .c-form__label, .c-form__field.is-warning .c-form__label, .c-form__field.is-info .c-form__label {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 157, src/scss/_macros/_form.scss */
+.c-form__field.is-error .c-form__input,
+.c-form__field.is-error .c-form__textarea, .c-form__field.is-invalid .c-form__input,
+.c-form__field.is-invalid .c-form__textarea, .c-form__field.is-warning .c-form__input,
+.c-form__field.is-warning .c-form__textarea, .c-form__field.is-info .c-form__input,
+.c-form__field.is-info .c-form__textarea {
+  -webkit-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 161, src/scss/_macros/_form.scss */
+.c-form__field.is-error .c-form__select-wrapper,
+.c-form__field.is-error .c-form__select-wrapper .c-form__select-value,
+.c-form__field.is-error .c-form__select-wrapper .c-form__select-icon i, .c-form__field.is-invalid .c-form__select-wrapper,
+.c-form__field.is-invalid .c-form__select-wrapper .c-form__select-value,
+.c-form__field.is-invalid .c-form__select-wrapper .c-form__select-icon i, .c-form__field.is-warning .c-form__select-wrapper,
+.c-form__field.is-warning .c-form__select-wrapper .c-form__select-value,
+.c-form__field.is-warning .c-form__select-wrapper .c-form__select-icon i, .c-form__field.is-info .c-form__select-wrapper,
+.c-form__field.is-info .c-form__select-wrapper .c-form__select-value,
+.c-form__field.is-info .c-form__select-wrapper .c-form__select-icon i {
+  -webkit-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 167, src/scss/_macros/_form.scss */
+.c-form__field.is-error .c-form__notify li, .c-form__field.is-invalid .c-form__notify li, .c-form__field.is-warning .c-form__notify li, .c-form__field.is-info .c-form__notify li {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 175, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__label, .c-form__field.is-error .c-form__label {
+  color: #cc0000;
+}
+
+/* line 178, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__input,
+.c-form__field.is-invalid .c-form__textarea, .c-form__field.is-error .c-form__input,
+.c-form__field.is-error .c-form__textarea {
+  border-color: #cc0000;
+  color: #cc0000;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-invalid .c-form__input.placeholder,
+.c-form__field.is-invalid .c-form__textarea.placeholder, .c-form__field.is-error .c-form__input.placeholder,
+.c-form__field.is-error .c-form__textarea.placeholder {
+  color: #cc0000;
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-invalid .c-form__input:-moz-placeholder,
+.c-form__field.is-invalid .c-form__textarea:-moz-placeholder, .c-form__field.is-error .c-form__input:-moz-placeholder,
+.c-form__field.is-error .c-form__textarea:-moz-placeholder {
+  color: #cc0000;
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-invalid .c-form__input::-moz-placeholder,
+.c-form__field.is-invalid .c-form__textarea::-moz-placeholder, .c-form__field.is-error .c-form__input::-moz-placeholder,
+.c-form__field.is-error .c-form__textarea::-moz-placeholder {
+  color: #cc0000;
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-invalid .c-form__input:-ms-input-placeholder,
+.c-form__field.is-invalid .c-form__textarea:-ms-input-placeholder, .c-form__field.is-error .c-form__input:-ms-input-placeholder,
+.c-form__field.is-error .c-form__textarea:-ms-input-placeholder {
+  color: #cc0000;
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-invalid .c-form__input::-webkit-input-placeholder,
+.c-form__field.is-invalid .c-form__textarea::-webkit-input-placeholder, .c-form__field.is-error .c-form__input::-webkit-input-placeholder,
+.c-form__field.is-error .c-form__textarea::-webkit-input-placeholder {
+  color: #cc0000;
+}
+
+/* line 186, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__select-wrapper,
+.c-form__field.is-invalid .c-form__select-wrapper .c-form__select-value,
+.c-form__field.is-invalid .c-form__select-wrapper .c-form__select-icon i, .c-form__field.is-error .c-form__select-wrapper,
+.c-form__field.is-error .c-form__select-wrapper .c-form__select-value,
+.c-form__field.is-error .c-form__select-wrapper .c-form__select-icon i {
+  border-color: #cc0000;
+  color: #cc0000;
+}
+
+/* line 194, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__radio-icon i, .c-form__field.is-error .c-form__radio-icon i {
+  border-color: #cc0000;
+}
+
+/* line 197, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__radio-icon i:before, .c-form__field.is-error .c-form__radio-icon i:before {
+  background-color: #cc0000;
+}
+
+/* line 202, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__radio-text, .c-form__field.is-error .c-form__radio-text {
+  color: #cc0000;
+}
+
+/* line 208, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__checkbox-icon i, .c-form__field.is-error .c-form__checkbox-icon i {
+  border-color: #cc0000;
+}
+
+/* line 211, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__checkbox-icon i:before, .c-form__field.is-error .c-form__checkbox-icon i:before {
+  border-color: #cc0000;
+}
+
+/* line 216, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__checkbox-text, .c-form__field.is-error .c-form__checkbox-text {
+  color: #cc0000;
+}
+
+/* line 221, src/scss/_macros/_form.scss */
+.c-form__field.is-invalid .c-form__notify li, .c-form__field.is-error .c-form__notify li {
+  color: #cc0000;
+}
+
+/* line 227, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__label {
+  color: #ff8800;
+}
+
+/* line 230, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__input,
+.c-form__field.is-warning .c-form__textarea {
+  border-color: #ff8800;
+  color: #ff8800;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-warning .c-form__input.placeholder,
+.c-form__field.is-warning .c-form__textarea.placeholder {
+  color: #ff8800;
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-warning .c-form__input:-moz-placeholder,
+.c-form__field.is-warning .c-form__textarea:-moz-placeholder {
+  color: #ff8800;
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-warning .c-form__input::-moz-placeholder,
+.c-form__field.is-warning .c-form__textarea::-moz-placeholder {
+  color: #ff8800;
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-warning .c-form__input:-ms-input-placeholder,
+.c-form__field.is-warning .c-form__textarea:-ms-input-placeholder {
+  color: #ff8800;
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-warning .c-form__input::-webkit-input-placeholder,
+.c-form__field.is-warning .c-form__textarea::-webkit-input-placeholder {
+  color: #ff8800;
+}
+
+/* line 238, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__select-wrapper,
+.c-form__field.is-warning .c-form__select-wrapper .c-form__select-value,
+.c-form__field.is-warning .c-form__select-wrapper .c-form__select-icon i {
+  border-color: #ff8800;
+  color: #ff8800;
+}
+
+/* line 246, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__radio-icon i {
+  border-color: #ff8800;
+}
+
+/* line 249, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__radio-icon i:before {
+  background-color: #ff8800;
+}
+
+/* line 254, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__radio-text {
+  color: #ff8800;
+}
+
+/* line 260, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__checkbox-icon i {
+  border-color: #ff8800;
+}
+
+/* line 263, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__checkbox-icon i:before {
+  border-color: #ff8800;
+}
+
+/* line 268, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__checkbox-text {
+  color: #ff8800;
+}
+
+/* line 273, src/scss/_macros/_form.scss */
+.c-form__field.is-warning .c-form__notify li {
+  color: #ff8800;
+}
+
+/* line 279, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__label {
+  color: #33b5e5;
+}
+
+/* line 282, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__input,
+.c-form__field.is-info .c-form__textarea {
+  border-color: #33b5e5;
+  color: #33b5e5;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-info .c-form__input.placeholder,
+.c-form__field.is-info .c-form__textarea.placeholder {
+  color: #33b5e5;
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-info .c-form__input:-moz-placeholder,
+.c-form__field.is-info .c-form__textarea:-moz-placeholder {
+  color: #33b5e5;
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-info .c-form__input::-moz-placeholder,
+.c-form__field.is-info .c-form__textarea::-moz-placeholder {
+  color: #33b5e5;
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-info .c-form__input:-ms-input-placeholder,
+.c-form__field.is-info .c-form__textarea:-ms-input-placeholder {
+  color: #33b5e5;
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.c-form__field.is-info .c-form__input::-webkit-input-placeholder,
+.c-form__field.is-info .c-form__textarea::-webkit-input-placeholder {
+  color: #33b5e5;
+}
+
+/* line 290, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__select-wrapper,
+.c-form__field.is-info .c-form__select-wrapper .c-form__select-value,
+.c-form__field.is-info .c-form__select-wrapper .c-form__select-icon i {
+  border-color: #33b5e5;
+  color: #33b5e5;
+}
+
+/* line 298, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__radio-icon i {
+  border-color: #33b5e5;
+}
+
+/* line 301, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__radio-icon i:before {
+  background-color: #33b5e5;
+}
+
+/* line 306, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__radio-text {
+  color: #33b5e5;
+}
+
+/* line 312, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__checkbox-icon i {
+  border-color: #33b5e5;
+}
+
+/* line 315, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__checkbox-icon i:before {
+  border-color: #33b5e5;
+}
+
+/* line 320, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__checkbox-text {
+  color: #33b5e5;
+}
+
+/* line 325, src/scss/_macros/_form.scss */
+.c-form__field.is-info .c-form__notify li {
+  color: #33b5e5;
+}
+
+/* line 339, src/scss/_macros/_form.scss */
+.c-form__field--checkbox .c-form__label, .c-form__field--radio .c-form__label {
+  cursor: default;
+}
+
+/* line 345, src/scss/_macros/_form.scss */
+.c-form__label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 359, src/scss/_macros/_form.scss */
+.c-form__input-wrapper, .c-form__select-wrapper, .c-form__textarea-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 365, src/scss/_macros/_form.scss */
+.c-form__input, .c-form__select, .c-form__textarea {
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.c-form__input.placeholder, .c-form__select.placeholder, .c-form__textarea.placeholder {
+  color: #b9cfdb;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 88, src/scss/_utilities/_mixin.scss */
+  .c-form__input.placeholder, .c-form__select.placeholder, .c-form__textarea.placeholder {
+    font-size: 12px;
+  }
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.c-form__input:-moz-placeholder, .c-form__select:-moz-placeholder, .c-form__textarea:-moz-placeholder {
+  color: #b9cfdb;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 89, src/scss/_utilities/_mixin.scss */
+  .c-form__input:-moz-placeholder, .c-form__select:-moz-placeholder, .c-form__textarea:-moz-placeholder {
+    font-size: 12px;
+  }
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.c-form__input::-moz-placeholder, .c-form__select::-moz-placeholder, .c-form__textarea::-moz-placeholder {
+  color: #b9cfdb;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 90, src/scss/_utilities/_mixin.scss */
+  .c-form__input::-moz-placeholder, .c-form__select::-moz-placeholder, .c-form__textarea::-moz-placeholder {
+    font-size: 12px;
+  }
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.c-form__input:-ms-input-placeholder, .c-form__select:-ms-input-placeholder, .c-form__textarea:-ms-input-placeholder {
+  color: #b9cfdb;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 91, src/scss/_utilities/_mixin.scss */
+  .c-form__input:-ms-input-placeholder, .c-form__select:-ms-input-placeholder, .c-form__textarea:-ms-input-placeholder {
+    font-size: 12px;
+  }
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.c-form__input::-webkit-input-placeholder, .c-form__select::-webkit-input-placeholder, .c-form__textarea::-webkit-input-placeholder {
+  color: #b9cfdb;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 92, src/scss/_utilities/_mixin.scss */
+  .c-form__input::-webkit-input-placeholder, .c-form__select::-webkit-input-placeholder, .c-form__textarea::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+}
+
+/* line 385, src/scss/_macros/_form.scss */
+.c-form__input {
+  padding: 0 12px;
+  padding-right: 127px;
+  border: 1px solid #eeeff3;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  -webkit-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 385, src/scss/_macros/_form.scss */
+  .c-form__input {
+    font-size: 12px;
+  }
+}
+
+/* line 399, src/scss/_macros/_form.scss */
+.c-form__input-wrapper {
+  height: 50px;
+}
+
+/* line 404, src/scss/_macros/_form.scss */
+.c-form__select {
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* line 411, src/scss/_macros/_form.scss */
+.c-form__select-wrapper {
+  height: 50px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid gray;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* line 419, src/scss/_macros/_form.scss */
+.c-form__select-value {
+  z-index: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  line-height: 50px;
+  width: -webkit-calc(100% - 50px);
+  width: calc(100% - 50px);
+  padding-left: 20px;
+  color: #b9cfdb;
+  font-size: 14px;
+  font-weight: normal;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 436, src/scss/_macros/_form.scss */
+.is-choose .c-form__select-value {
+  color: #000;
+}
+
+/* line 441, src/scss/_macros/_form.scss */
+.c-form__select-icon {
+  z-index: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+}
+
+/* line 452, src/scss/_macros/_form.scss */
+.c-form__select-icon i {
+  padding: 3px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: border-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 459, src/scss/_macros/_form.scss */
+.is-focus .c-form__select-icon i {
+  -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 467, src/scss/_macros/_form.scss */
+.c-form__selectric {
+  opacity: 0;
+}
+
+/* line 470, src/scss/_macros/_form.scss */
+.c-form__selectric-wrapper {
+  position: relative;
+}
+
+/* line 475, src/scss/_macros/_form.scss */
+.c-form__textarea {
+  resize: none;
+  padding: 20px;
+  border: 1px solid #eeeff3;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 14px;
+  font-weight: normal;
+  -webkit-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 485, src/scss/_macros/_form.scss */
+.c-form__textarea-wrapper {
+  height: 150px;
+}
+
+/* line 490, src/scss/_macros/_form.scss */
+.c-form__radio, .c-form__checkbox {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+/* line 499, src/scss/_macros/_form.scss */
+.c-form__radio-wrapper, .c-form__checkbox-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 504, src/scss/_macros/_form.scss */
+.c-form__radio-content, .c-form__checkbox-content {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 511, src/scss/_macros/_form.scss */
+.c-form__radio-icon i, .c-form__checkbox-icon i {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 523, src/scss/_macros/_form.scss */
+.c-form__radio:checked + label .c-form__radio-icon i {
+  border-color: black;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* line 527, src/scss/_macros/_form.scss */
+.c-form__radio:checked + label .c-form__radio-icon i:before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  background-color: black;
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 537, src/scss/_macros/_form.scss */
+.c-form__radio-wrapper {
+  height: 50px;
+}
+
+/* line 541, src/scss/_macros/_form.scss */
+.c-form__radio-icon {
+  width: 30px;
+}
+
+/* line 544, src/scss/_macros/_form.scss */
+.c-form__radio-icon i {
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* line 551, src/scss/_macros/_form.scss */
+.c-form__radio-icon i:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  background-color: transparent;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 563, src/scss/_macros/_form.scss */
+.c-form__radio-text {
+  max-width: -webkit-calc(100% - 30px);
+  max-width: calc(100% - 30px);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* line 574, src/scss/_macros/_form.scss */
+.c-form__checkbox:checked + label .c-form__checkbox-icon i {
+  border-color: black;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* line 578, src/scss/_macros/_form.scss */
+.c-form__checkbox:checked + label .c-form__checkbox-icon i:before {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* line 587, src/scss/_macros/_form.scss */
+.c-form__checkbox-wrapper {
+  height: 50px;
+}
+
+/* line 591, src/scss/_macros/_form.scss */
+.c-form__checkbox-icon {
+  width: 30px;
+}
+
+/* line 594, src/scss/_macros/_form.scss */
+.c-form__checkbox-icon i {
+  width: 25px;
+  height: 25px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* line 601, src/scss/_macros/_form.scss */
+.c-form__checkbox-icon i:before {
+  content: '';
+  opacity: 0;
+  position: relative;
+  top: -2px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 6px;
+  height: 12px;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* line 616, src/scss/_macros/_form.scss */
+.c-form__checkbox-text {
+  max-width: -webkit-calc(100% - 30px);
+  max-width: calc(100% - 30px);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* line 623, src/scss/_macros/_form.scss */
+.c-form__notify {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  padding-top: 5px;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: c-fadeIn;
+          animation-name: c-fadeIn;
+}
+
+/* line 636, src/scss/_macros/_form.scss */
+.c-form__notify ul li {
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 645, src/scss/_macros/_form.scss */
+.c-form #radio-error,
+.c-form #checkbox-error,
+.c-form #select-error {
+  display: none !important;
+}
+
+@-webkit-keyframes c-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes c-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* line 3, src/scss/_components/_header.scss */
 .header {
   z-index: 1000;
@@ -1166,6 +2045,423 @@ picture {
     border-left: none;
     padding-right: 20px;
     padding-left: 20px;
+  }
+}
+
+/* line 3, src/scss/_components/_footer.scss */
+.footer {
+  padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/_footer.scss */
+  .footer {
+    display: none;
+  }
+}
+
+/* line 9, src/scss/_components/_footer.scss */
+.footer__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 14, src/scss/_components/_footer.scss */
+.footer__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 4, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 19, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-keyup .sv__form-info, .sv__form.is-valid .sv__form-info, .sv__form.is-invalid .sv__form-info, .sv__form.is-warning .sv__form-info {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* line 26, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-keyup .sv__btn, .sv__form.is-valid .sv__btn, .sv__form.is-invalid .sv__btn, .sv__form.is-warning .sv__btn {
+  background-color: #04c7ff;
+  -webkit-box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+          box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+  color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 38, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-valid .c-form__input, .sv__form.is-invalid .c-form__input, .sv__form.is-warning .c-form__input {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 44, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-valid .sv__form-indicate, .sv__form.is-invalid .sv__form-indicate, .sv__form.is-warning .sv__form-indicate {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 54, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-valid .c-form__input {
+  color: #41DCC7;
+}
+
+/* line 60, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-valid .sv__form-indicate {
+  background-color: #41dcc7;
+  color: #fff;
+}
+
+/* line 68, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-invalid .c-form__input {
+  color: #FE95B3;
+}
+
+/* line 74, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-invalid .sv__form-indicate {
+  background-color: #fe95b3;
+  color: #fff;
+}
+
+/* line 82, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-warning .c-form__input {
+  color: #F4B44B;
+}
+
+/* line 88, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form.is-warning .sv__form-indicate {
+  background-color: #fbd391;
+  color: #fff;
+}
+
+/* line 96, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-left {
+  position: relative;
+  width: -webkit-calc(100% - (122px + 17px));
+  width: calc(100% - (122px + 17px));
+}
+
+@media screen and (max-width: 767px) {
+  /* line 96, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__form-left {
+    width: 100%;
+  }
+}
+
+/* line 104, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-indicate {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 105px;
+  height: 28px;
+  padding: 5px 10px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background-color: #eee;
+  color: #000000;
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 104, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__form-indicate {
+    -webkit-border-radius: 25px;
+            border-radius: 25px;
+    font-size: 13px;
+  }
+}
+
+/* line 127, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-right {
+  width: 122px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 127, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__form-right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+
+/* line 137, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* line 145, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info-cover {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  max-width: 369px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 145, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__form-info-cover {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 157, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info-cover:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #eeeff3;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 157, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__form-info-cover:after {
+    display: none;
+  }
+}
+
+/* line 172, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 172, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__form-info-col {
+    max-width: 100%;
+  }
+}
+
+/* line 181, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info-col:nth-of-type(1), .sv__form-info-col:nth-of-type(2) {
+  padding-bottom: 18px;
+}
+
+/* line 186, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info-col:nth-of-type(2), .sv__form-info-col:nth-of-type(4) {
+  padding-left: 38px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 186, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__form-info-col:nth-of-type(2), .sv__form-info-col:nth-of-type(4) {
+    padding-left: 0;
+    padding-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 195, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__form-info-col:nth-of-type(3) {
+    padding-bottom: 18px;
+  }
+}
+
+/* line 202, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info-col > div:nth-of-type(1) {
+  width: 24px;
+}
+
+/* line 205, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info-col > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 213, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info i {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 17px;
+  height: 17px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+/* line 219, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info i.safe {
+  background-color: #41dcc7;
+}
+
+/* line 222, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info i.address {
+  background-color: #ce96ff;
+}
+
+/* line 225, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info i.accept {
+  background-color: #fbd391;
+}
+
+/* line 228, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info i.disposable {
+  background-color: #fe95b3;
+}
+
+/* line 233, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #537097;
+}
+
+/* line 237, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info p span {
+  min-width: 100px;
+}
+
+/* line 241, src/scss/_components/single-verification/_single-verification.scss */
+.sv__form-info p strong {
+  font-weight: 600;
+}
+
+/* line 248, src/scss/_components/single-verification/_single-verification.scss */
+.sv__btn {
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 122px;
+  height: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #eeeff3;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #04c7ff;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 248, src/scss/_components/single-verification/_single-verification.scss */
+  .sv__btn {
+    -webkit-border-radius: 25px;
+            border-radius: 25px;
   }
 }
 
