@@ -472,7 +472,14 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 77, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 72, src/scss/_shared/_common.scss */
+  .nav__list-item a:hover {
+    color: #51c4fb;
+  }
+}
+
+/* line 80, src/scss/_shared/_common.scss */
 .nav__list-item a.is-active {
   color: #000000;
   -webkit-transition: color 0.3s ease-in-out;
@@ -480,7 +487,14 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 81, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 80, src/scss/_shared/_common.scss */
+  .nav__list-item a.is-active {
+    color: #51c4fb;
+  }
+}
+
+/* line 87, src/scss/_shared/_common.scss */
 .nav__list-item a.is-active:after {
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -493,7 +507,7 @@ picture {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 88, src/scss/_shared/_common.scss */
+/* line 94, src/scss/_shared/_common.scss */
 .nav__list-item a:after {
   opacity: 0;
   content: '';
@@ -515,24 +529,24 @@ picture {
 }
 
 @media screen and (max-width: 1199px) {
-  /* line 88, src/scss/_shared/_common.scss */
+  /* line 94, src/scss/_shared/_common.scss */
   .nav__list-item a:after {
     display: none;
   }
 }
 
-/* line 104, src/scss/_shared/_common.scss */
+/* line 110, src/scss/_shared/_common.scss */
 .nav__list-item a img {
   margin-right: 5px;
 }
 
-/* line 112, src/scss/_shared/_common.scss */
+/* line 118, src/scss/_shared/_common.scss */
 .hamburger {
   display: none;
 }
 
 @media screen and (max-width: 1199px) {
-  /* line 112, src/scss/_shared/_common.scss */
+  /* line 118, src/scss/_shared/_common.scss */
   .hamburger {
     display: -webkit-box;
     display: -webkit-flex;
@@ -541,7 +555,7 @@ picture {
   }
 }
 
-/* line 118, src/scss/_shared/_common.scss */
+/* line 124, src/scss/_shared/_common.scss */
 .hamburger__btn {
   position: relative;
   display: -webkit-box;
@@ -556,7 +570,7 @@ picture {
   height: 22px;
 }
 
-/* line 125, src/scss/_shared/_common.scss */
+/* line 131, src/scss/_shared/_common.scss */
 .hamburger__btn span {
   position: absolute;
   height: 4px;
@@ -565,14 +579,14 @@ picture {
   background-color: #537097;
 }
 
-/* line 131, src/scss/_shared/_common.scss */
+/* line 137, src/scss/_shared/_common.scss */
 .hamburger__btn span:nth-of-type(1) {
   top: 0;
   left: 0;
   width: 60%;
 }
 
-/* line 137, src/scss/_shared/_common.scss */
+/* line 143, src/scss/_shared/_common.scss */
 .hamburger__btn span:nth-of-type(2) {
   top: 50%;
   left: 0;
@@ -582,14 +596,14 @@ picture {
   width: 100%;
 }
 
-/* line 144, src/scss/_shared/_common.scss */
+/* line 150, src/scss/_shared/_common.scss */
 .hamburger__btn span:nth-of-type(3) {
   bottom: 0;
   right: 0;
   width: 60%;
 }
 
-/* line 153, src/scss/_shared/_common.scss */
+/* line 159, src/scss/_shared/_common.scss */
 .profile {
   display: -webkit-box;
   display: -webkit-flex;
@@ -606,12 +620,12 @@ picture {
   min-height: 100%;
 }
 
-/* line 159, src/scss/_shared/_common.scss */
+/* line 165, src/scss/_shared/_common.scss */
 .profile__dropdown {
   position: relative;
 }
 
-/* line 162, src/scss/_shared/_common.scss */
+/* line 168, src/scss/_shared/_common.scss */
 .profile__dropdown-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -623,7 +637,7 @@ picture {
           align-items: center;
 }
 
-/* line 166, src/scss/_shared/_common.scss */
+/* line 172, src/scss/_shared/_common.scss */
 .profile__dropdown-btn > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -635,7 +649,7 @@ picture {
           align-items: center;
 }
 
-/* line 170, src/scss/_shared/_common.scss */
+/* line 176, src/scss/_shared/_common.scss */
 .profile__dropdown-btn > div:nth-of-type(1) {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -649,12 +663,12 @@ picture {
   padding-right: 25px;
 }
 
-/* line 176, src/scss/_shared/_common.scss */
+/* line 182, src/scss/_shared/_common.scss */
 .profile__dropdown-btn > div:nth-of-type(2) {
   cursor: pointer;
 }
 
-/* line 182, src/scss/_shared/_common.scss */
+/* line 188, src/scss/_shared/_common.scss */
 .profile__dropdown-name {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -664,7 +678,7 @@ picture {
   color: #537097;
 }
 
-/* line 190, src/scss/_shared/_common.scss */
+/* line 196, src/scss/_shared/_common.scss */
 .profile__dropdown-status {
   display: -webkit-box;
   display: -webkit-flex;
@@ -677,7 +691,7 @@ picture {
   color: #b9cfdb;
 }
 
-/* line 196, src/scss/_shared/_common.scss */
+/* line 202, src/scss/_shared/_common.scss */
 .profile__dropdown-ind {
   display: -webkit-box;
   display: -webkit-flex;
@@ -691,7 +705,7 @@ picture {
   background-color: #41dcc7;
 }
 
-/* line 205, src/scss/_shared/_common.scss */
+/* line 211, src/scss/_shared/_common.scss */
 .profile__dropdown-img {
   overflow: hidden;
   position: relative;
@@ -701,7 +715,7 @@ picture {
           border-radius: 50%;
 }
 
-/* line 217, src/scss/_shared/_common.scss */
+/* line 223, src/scss/_shared/_common.scss */
 .profile__dropdown-corner {
   -webkit-transform: translateY(3px);
       -ms-transform: translateY(3px);
@@ -714,7 +728,7 @@ picture {
   border-color: #B9CFDB transparent transparent transparent;
 }
 
-/* line 227, src/scss/_shared/_common.scss */
+/* line 233, src/scss/_shared/_common.scss */
 .profile__dropdown-container {
   display: none;
   position: absolute;
@@ -740,7 +754,7 @@ picture {
           animation-name: fadeOut;
 }
 
-/* line 242, src/scss/_shared/_common.scss */
+/* line 248, src/scss/_shared/_common.scss */
 .is-open .profile__dropdown-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -754,7 +768,7 @@ picture {
           animation-name: fadeIn;
 }
 
-/* line 249, src/scss/_shared/_common.scss */
+/* line 255, src/scss/_shared/_common.scss */
 .profile__dropdown-container > a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -775,13 +789,13 @@ picture {
   font-size: 12px;
 }
 
-/* line 259, src/scss/_shared/_common.scss */
+/* line 265, src/scss/_shared/_common.scss */
 .profile__dropdown-container > a:last-of-type {
   border-bottom: none;
   color: #fe95b3;
 }
 
-/* line 268, src/scss/_shared/_common.scss */
+/* line 274, src/scss/_shared/_common.scss */
 .balance {
   display: -webkit-box;
   display: -webkit-flex;
@@ -795,7 +809,7 @@ picture {
   padding-right: 23px;
 }
 
-/* line 274, src/scss/_shared/_common.scss */
+/* line 280, src/scss/_shared/_common.scss */
 .balance h6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -807,20 +821,20 @@ picture {
           align-items: center;
 }
 
-/* line 279, src/scss/_shared/_common.scss */
+/* line 285, src/scss/_shared/_common.scss */
 .balance h6 span {
   padding-right: 5px;
   color: #b9cfdb;
 }
 
-/* line 284, src/scss/_shared/_common.scss */
+/* line 290, src/scss/_shared/_common.scss */
 .balance h6 p {
   color: #000000;
   font-size: 18px;
   line-height: 1;
 }
 
-/* line 289, src/scss/_shared/_common.scss */
+/* line 295, src/scss/_shared/_common.scss */
 .balance h6 p i {
   position: relative;
   top: -1px;
@@ -829,20 +843,20 @@ picture {
   line-height: 1;
 }
 
-/* line 300, src/scss/_shared/_common.scss */
+/* line 306, src/scss/_shared/_common.scss */
 .heading {
   padding-top: 120px;
   padding-bottom: 40px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 300, src/scss/_shared/_common.scss */
+  /* line 306, src/scss/_shared/_common.scss */
   .heading {
     padding-bottom: 20px;
   }
 }
 
-/* line 307, src/scss/_shared/_common.scss */
+/* line 313, src/scss/_shared/_common.scss */
 .heading__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -859,7 +873,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 307, src/scss/_shared/_common.scss */
+  /* line 313, src/scss/_shared/_common.scss */
   .heading__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -869,35 +883,35 @@ picture {
   }
 }
 
-/* line 315, src/scss/_shared/_common.scss */
+/* line 321, src/scss/_shared/_common.scss */
 .heading__wrapper > div {
   width: auto;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 315, src/scss/_shared/_common.scss */
+  /* line 321, src/scss/_shared/_common.scss */
   .heading__wrapper > div {
     width: 100%;
   }
-  /* line 320, src/scss/_shared/_common.scss */
+  /* line 326, src/scss/_shared/_common.scss */
   .heading__wrapper > div:nth-of-type(1) {
     padding-top: 20px;
   }
 }
 
-/* line 327, src/scss/_shared/_common.scss */
+/* line 333, src/scss/_shared/_common.scss */
 .heading__title {
   color: #000000;
   font-size: 24px;
 }
 
-/* line 332, src/scss/_shared/_common.scss */
+/* line 338, src/scss/_shared/_common.scss */
 .heading__subtitle {
   color: #b9cfdb;
   font-size: 13px;
 }
 
-/* line 337, src/scss/_shared/_common.scss */
+/* line 343, src/scss/_shared/_common.scss */
 .heading__btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -928,13 +942,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 337, src/scss/_shared/_common.scss */
+  /* line 343, src/scss/_shared/_common.scss */
   .heading__btn {
     margin-left: auto;
   }
 }
 
-/* line 353, src/scss/_shared/_common.scss */
+/* line 359, src/scss/_shared/_common.scss */
 .heading__btn:hover {
   -webkit-box-shadow: 0 0 14px 0 rgba(83, 112, 151, 0.1);
           box-shadow: 0 0 14px 0 rgba(83, 112, 151, 0.1);
@@ -946,7 +960,7 @@ picture {
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 359, src/scss/_shared/_common.scss */
+/* line 365, src/scss/_shared/_common.scss */
 .heading__btn span {
   padding-left: 5px;
 }
@@ -2088,8 +2102,330 @@ picture {
           justify-content: center;
 }
 
+/* line 4, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 4, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 10, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__wrapper-left {
+  width: 335px;
+  padding-right: 35px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 10, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__wrapper-left {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+}
+
+/* line 20, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__wrapper-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 27, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 143px;
+  padding: 20px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 14px rgba(83, 112, 151, 0.06);
+          box-shadow: 0 0 14px rgba(83, 112, 151, 0.06);
+}
+
+/* line 37, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-left {
+  width: 57px;
+  padding-right: 19px;
+}
+
+/* line 42, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 48, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 48, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 57, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-wrapper > div {
+  padding-bottom: 12px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 57, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box-wrapper > div {
+    width: -webkit-calc((100% - 12px) / 2);
+    width: calc((100% - 12px) / 2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 57, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box-wrapper > div {
+    width: 100%;
+  }
+}
+
+/* line 66, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-wrapper > div:last-of-type {
+  padding-bottom: 0;
+}
+
+/* line 72, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-ind {
+  width: 38px;
+  height: 38px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #eeeeee;
+}
+
+/* line 78, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-ind--green {
+  background-color: #41dcc7;
+}
+
+/* line 81, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-ind--red {
+  background-color: #fe95b3;
+}
+
+/* line 86, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-count {
+  font-size: 48px;
+  letter-spacing: 0.01em;
+  color: #000;
+  line-height: 1;
+}
+
+/* line 93, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box-desc {
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+/* line 99, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 14px rgba(83, 112, 151, 0.06);
+          box-shadow: 0 0 14px rgba(83, 112, 151, 0.06);
+}
+
+/* line 107, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 80px;
+  padding: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 107, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__chart-head {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 117, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-head--right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 117, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__chart-head--right {
+    width: 100%;
+    padding-top: 24px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 128, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-head p {
+  line-height: 1;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
+/* line 135, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-head span {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: #537097;
+}
+
+/* line 141, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-head a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #537097;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 141, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__chart-head a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  /* line 141, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__chart-head a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+/* line 158, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-head a.is-active {
+  color: #000000;
+}
+
+/* line 162, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-head a:hover {
+  color: #000000;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 167, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-head a:first-of-type {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 167, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__chart-head a:first-of-type {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  /* line 167, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__chart-head a:first-of-type {
+    margin-left: 5px;
+  }
+}
+
+/* line 179, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__chart-body {
+  position: relative;
+  padding: 0 15px 30px;
+}
+
 /* line 4, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form {
+.singleVerification__form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2108,7 +2444,7 @@ picture {
 }
 
 /* line 19, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-keyup .sv__form-info, .sv__form.is-valid .sv__form-info, .sv__form.is-invalid .sv__form-info, .sv__form.is-warning .sv__form-info {
+.singleVerification__form.is-keyup .singleVerification__form-info, .singleVerification__form.is-valid .singleVerification__form-info, .singleVerification__form.is-invalid .singleVerification__form-info, .singleVerification__form.is-warning .singleVerification__form-info {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -2117,7 +2453,7 @@ picture {
 }
 
 /* line 26, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-keyup .sv__btn, .sv__form.is-valid .sv__btn, .sv__form.is-invalid .sv__btn, .sv__form.is-warning .sv__btn {
+.singleVerification__form.is-keyup .singleVerification__btn, .singleVerification__form.is-valid .singleVerification__btn, .singleVerification__form.is-invalid .singleVerification__btn, .singleVerification__form.is-warning .singleVerification__btn {
   background-color: #04c7ff;
   -webkit-box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
           box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
@@ -2130,14 +2466,14 @@ picture {
 }
 
 /* line 38, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-valid .c-form__input, .sv__form.is-invalid .c-form__input, .sv__form.is-warning .c-form__input {
+.singleVerification__form.is-valid .c-form__input, .singleVerification__form.is-invalid .c-form__input, .singleVerification__form.is-warning .c-form__input {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
 /* line 44, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-valid .sv__form-indicate, .sv__form.is-invalid .sv__form-indicate, .sv__form.is-warning .sv__form-indicate {
+.singleVerification__form.is-valid .singleVerification__form-indicate, .singleVerification__form.is-invalid .singleVerification__form-indicate, .singleVerification__form.is-warning .singleVerification__form-indicate {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -2146,40 +2482,40 @@ picture {
 }
 
 /* line 54, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-valid .c-form__input {
+.singleVerification__form.is-valid .c-form__input {
   color: #41DCC7;
 }
 
 /* line 60, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-valid .sv__form-indicate {
+.singleVerification__form.is-valid .singleVerification__form-indicate {
   background-color: #41dcc7;
   color: #fff;
 }
 
 /* line 68, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-invalid .c-form__input {
+.singleVerification__form.is-invalid .c-form__input {
   color: #FE95B3;
 }
 
 /* line 74, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-invalid .sv__form-indicate {
+.singleVerification__form.is-invalid .singleVerification__form-indicate {
   background-color: #fe95b3;
   color: #fff;
 }
 
 /* line 82, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-warning .c-form__input {
+.singleVerification__form.is-warning .c-form__input {
   color: #F4B44B;
 }
 
 /* line 88, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form.is-warning .sv__form-indicate {
+.singleVerification__form.is-warning .singleVerification__form-indicate {
   background-color: #fbd391;
   color: #fff;
 }
 
 /* line 96, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-left {
+.singleVerification__form-left {
   position: relative;
   width: -webkit-calc(100% - (122px + 17px));
   width: calc(100% - (122px + 17px));
@@ -2187,13 +2523,13 @@ picture {
 
 @media screen and (max-width: 767px) {
   /* line 96, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__form-left {
+  .singleVerification__form-left {
     width: 100%;
   }
 }
 
 /* line 104, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-indicate {
+.singleVerification__form-indicate {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -2226,7 +2562,7 @@ picture {
 
 @media screen and (max-width: 767px) {
   /* line 104, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__form-indicate {
+  .singleVerification__form-indicate {
     -webkit-border-radius: 25px;
             border-radius: 25px;
     font-size: 13px;
@@ -2234,13 +2570,13 @@ picture {
 }
 
 /* line 127, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-right {
+.singleVerification__form-right {
   width: 122px;
 }
 
 @media screen and (max-width: 767px) {
   /* line 127, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__form-right {
+  .singleVerification__form-right {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2255,7 +2591,7 @@ picture {
 }
 
 /* line 137, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info {
+.singleVerification__form-info {
   opacity: 0;
   visibility: hidden;
   width: 100%;
@@ -2267,7 +2603,7 @@ picture {
 }
 
 /* line 145, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info-cover {
+.singleVerification__form-info-cover {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2282,7 +2618,7 @@ picture {
 
 @media screen and (max-width: 767px) {
   /* line 145, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__form-info-cover {
+  .singleVerification__form-info-cover {
     max-width: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -2290,7 +2626,7 @@ picture {
 }
 
 /* line 157, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info-cover:after {
+.singleVerification__form-info-cover:after {
   content: '';
   position: absolute;
   top: 0;
@@ -2305,13 +2641,13 @@ picture {
 
 @media screen and (max-width: 767px) {
   /* line 157, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__form-info-cover:after {
+  .singleVerification__form-info-cover:after {
     display: none;
   }
 }
 
 /* line 172, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info-col {
+.singleVerification__form-info-col {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2326,24 +2662,24 @@ picture {
 
 @media screen and (max-width: 767px) {
   /* line 172, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__form-info-col {
+  .singleVerification__form-info-col {
     max-width: 100%;
   }
 }
 
 /* line 181, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info-col:nth-of-type(1), .sv__form-info-col:nth-of-type(2) {
+.singleVerification__form-info-col:nth-of-type(1), .singleVerification__form-info-col:nth-of-type(2) {
   padding-bottom: 18px;
 }
 
 /* line 186, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info-col:nth-of-type(2), .sv__form-info-col:nth-of-type(4) {
+.singleVerification__form-info-col:nth-of-type(2), .singleVerification__form-info-col:nth-of-type(4) {
   padding-left: 38px;
 }
 
 @media screen and (max-width: 767px) {
   /* line 186, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__form-info-col:nth-of-type(2), .sv__form-info-col:nth-of-type(4) {
+  .singleVerification__form-info-col:nth-of-type(2), .singleVerification__form-info-col:nth-of-type(4) {
     padding-left: 0;
     padding-bottom: 18px;
   }
@@ -2351,18 +2687,18 @@ picture {
 
 @media screen and (max-width: 767px) {
   /* line 195, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__form-info-col:nth-of-type(3) {
+  .singleVerification__form-info-col:nth-of-type(3) {
     padding-bottom: 18px;
   }
 }
 
 /* line 202, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info-col > div:nth-of-type(1) {
+.singleVerification__form-info-col > div:nth-of-type(1) {
   width: 24px;
 }
 
 /* line 205, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info-col > div:nth-of-type(2) {
+.singleVerification__form-info-col > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
@@ -2372,7 +2708,7 @@ picture {
 }
 
 /* line 213, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info i {
+.singleVerification__form-info i {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2384,27 +2720,27 @@ picture {
 }
 
 /* line 219, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info i.safe {
+.singleVerification__form-info i.safe {
   background-color: #41dcc7;
 }
 
 /* line 222, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info i.address {
+.singleVerification__form-info i.address {
   background-color: #ce96ff;
 }
 
 /* line 225, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info i.accept {
+.singleVerification__form-info i.accept {
   background-color: #fbd391;
 }
 
 /* line 228, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info i.disposable {
+.singleVerification__form-info i.disposable {
   background-color: #fe95b3;
 }
 
 /* line 233, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info p {
+.singleVerification__form-info p {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2413,17 +2749,17 @@ picture {
 }
 
 /* line 237, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info p span {
+.singleVerification__form-info p span {
   min-width: 100px;
 }
 
 /* line 241, src/scss/_components/single-verification/_single-verification.scss */
-.sv__form-info p strong {
+.singleVerification__form-info p strong {
   font-weight: 600;
 }
 
 /* line 248, src/scss/_components/single-verification/_single-verification.scss */
-.sv__btn {
+.singleVerification__btn {
   outline: none;
   cursor: pointer;
   display: -webkit-box;
@@ -2459,7 +2795,7 @@ picture {
 
 @media screen and (max-width: 767px) {
   /* line 248, src/scss/_components/single-verification/_single-verification.scss */
-  .sv__btn {
+  .singleVerification__btn {
     -webkit-border-radius: 25px;
             border-radius: 25px;
   }

@@ -1,6 +1,6 @@
 // SECTION single verification :: START
 
-.sv {
+.singleVerification {
 	&__form {
 		display: flex;
 		flex-wrap: wrap;
@@ -14,7 +14,7 @@
 		&.is-valid,
 		&.is-invalid,
 		&.is-warning {
-			.sv {
+			.singleVerification {
 				&__form {
 					&-info {
 						opacity: 1;
@@ -39,7 +39,7 @@
 				@include transition(color);
 			}
 
-			.sv {
+			.singleVerification {
 				&__form {
 					&-indicate {
 						opacity: 1;
@@ -55,7 +55,7 @@
 				color: #41DCC7;
 			}
 
-			.sv {
+			.singleVerification {
 				&__form {
 					&-indicate {
 						background-color: rgba(#41dcc7, 1);
@@ -69,7 +69,7 @@
 				color: #FE95B3;
 			}
 
-			.sv {
+			.singleVerification {
 				&__form {
 					&-indicate {
 						background-color: rgba(#FE95B3, 1);
@@ -83,7 +83,7 @@
 				color: #F4B44B;
 			}
 
-			.sv {
+			.singleVerification {
 				&__form {
 					&-indicate {
 						background-color: rgba(#FBD391, 1);

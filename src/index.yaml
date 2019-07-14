@@ -3,7 +3,7 @@ ProjectTitle: EmailMarker Dashboard
 PageList:
 - file: index.html
   titleName: Home
-  ready: 1
+  ready: 90
 - file: account.html
   titleName: Account
   ready: 1

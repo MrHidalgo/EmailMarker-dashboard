@@ -72,11 +72,17 @@
 				&:hover {
 					color: #000000;
 					@include transition(color);
+					@include adaptive(767) {
+						color: #51c4fb;
+					}
 				}
 
 				&.is-active {
 					color: #000000;
 					@include transition(color);
+					@include adaptive(767) {
+						color: #51c4fb;
+					}
 
 					&:after {
 						opacity: 1;

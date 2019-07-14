@@ -1,0 +1,49 @@
+// SECTION dashboard :: START
+
+section#dashboard.dashboard
+	.c-grid
+
+		.dashboard__wrapper
+			.dashboard__wrapper-left
+
+				.dashboard__box-wrapper
+					div
+						.dashboard__box.dashboard__box-0
+							.dashboard__box-left
+								.dashboard__box-ind.dashboard__box-ind--green
+							.dashboard__box-right
+								p.dashboard__box-count!= "2682"
+								span.dashboard__box-desc!= "Deliverable"
+					div
+						.dashboard__box.dashboard__box-1
+							.dashboard__box-left
+								.dashboard__box-ind.dashboard__box-ind--red
+							.dashboard__box-right
+								p.dashboard__box-count!= "109"
+								span.dashboard__box-desc!= "Invalid"
+					div
+						.dashboard__box.dashboard__box-2
+							.dashboard__box-left
+								.dashboard__box-img
+									img(src="img/img-dashboard-allRequest.svg" alt="" title="")
+							.dashboard__box-right
+								p.dashboard__box-count!= "24"
+								span.dashboard__box-desc!= "API Request"
+
+			.dashboard__wrapper-right
+
+				.dashboard__chart
+					.dashboard__chart-head
+						.dashboard__chart-head--left
+							p!= "MyApi_2018"
+							span!= "06/07/17 12:30 AM"
+						.dashboard__chart-head--right
+							a.is-active(href="#" class="" title="")!= "Today"
+							a(href="#" class="" title="")!= "Yesterday"
+							a(href="#" class="" title="")!= "Week"
+							a(href="#" class="" title="")!= "Month"
+							a(href="#" class="" title="")!= "Year"
+
+					.dashboard__chart-body
+
+// SECTION dashboard :: END
