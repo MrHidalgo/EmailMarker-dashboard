@@ -1,5 +1,152 @@
 // SECTION account :: START
 
-.account {}
+.account {
+	&__wrapper {
+		display: flex;
+		width: 100%;
+		max-width: calc((439px * 2) + 85px);
+		margin-left: auto;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
+
+		&-left,
+		&-right {
+			width: 50%;
+			@include adaptive(767) {
+				width: 100%;
+			}
+		}
+
+		&-left {
+			padding-right: 15px;
+			@include adaptive(767) {
+				padding-right: 0;
+				padding-bottom: 30px;
+			}
+		}
+
+		&-right {
+			padding-left: 15px;
+			@include adaptive(767) {
+				padding-left: 0;
+			}
+
+			.account__wrapper-cover {
+				margin-left: auto;
+			}
+		}
+
+		&-cover {
+			width: 100%;
+			max-width: 439px;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 50px;
+		border-bottom: 1px solid #EEEFF3;
+
+		&-title {
+			font-size: 14px;
+			letter-spacing: 0.01em;
+			color: #000;
+		}
+
+		&-btn {
+			cursor: pointer;
+			outline: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 110px;
+			height: 26px;
+			border-radius: 3px;
+			background-color: #fff;
+			box-shadow: none;
+			border: 1px solid #eeeff3;
+			color: #51c4fb;
+			@include transition(background-color, border-color, box-shadow, color);
+			@include adaptive(767) {
+				border-radius: 25px;
+			}
+
+			&-0 {
+				background-color: #04c7ff;
+				border-color: #04c7ff;
+				box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+				color: #ffffff;
+
+				&:hover {
+					background-color: #fff;
+					border-color: #eeeff3;
+					box-shadow: none;
+					color: #51c4fb;
+					@include transition(background-color, border-color, box-shadow, color);
+				}
+			}
+
+			&-1 {
+				&:hover {
+					background-color: #04c7ff;
+					border-color: #04c7ff;
+					box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+					color: #ffffff;
+					@include transition(background-color, border-color, box-shadow, color);
+				}
+			}
+		}
+	}
+
+	&__body {
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+
+	&__input {
+		display: flex;
+		align-items: center;
+		min-height: 49px;
+		margin-bottom: 16px;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+
+		&-left {
+			width: 100%;
+			max-width: 120px;
+			@include adaptive(767) {
+				max-width: 100%;
+				padding-bottom: 10px;
+			}
+		}
+
+		&-right {
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+		}
+
+		&-label {
+			font-size: 14px;
+			letter-spacing: 0.01em;
+			color: #537097;
+		}
+
+		&-info {
+			padding-left: 20px;
+			font-size: 12px;
+			letter-spacing: 0.01em;
+			color: #000;
+		}
+	}
+}
 
 // SECTION account :: END

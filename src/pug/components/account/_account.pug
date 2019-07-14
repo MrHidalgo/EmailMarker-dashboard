@@ -1,7 +1,168 @@
 // SECTION account :: START
 
+-
+	var dataFormObj = {
+		inputPassNew: {
+			classMod: "",
+			uniqueName: "account_password_new",
+			labelVal: "",
+			inputType: "password",
+			inputClassMod: "",
+			placeholderVal: "***************",
+			val: ""
+		},
+		inputPassRepeat: {
+			classMod: "",
+			uniqueName: "account_password_repeat",
+			labelVal: "",
+			inputType: "password",
+			inputClassMod: "",
+			placeholderVal: "***************",
+			val: ""
+		},
+		inputFullName: {
+			classMod: "",
+			uniqueName: "account_full_name",
+			labelVal: "",
+			inputType: "text",
+			inputClassMod: "",
+			placeholderVal: "",
+			val: "Youssef EL"
+		},
+		inputPhone: {
+			classMod: "",
+			uniqueName: "account_phone",
+			labelVal: "",
+			inputType: "text",
+			inputClassMod: "",
+			placeholderVal: "06689784512",
+			val: ""
+		},
+		inputAddress: {
+			classMod: "",
+			uniqueName: "account_address",
+			labelVal: "",
+			inputType: "text",
+			inputClassMod: "",
+			placeholderVal: "myadress 777777",
+			val: ""
+		},
+		inputCity: {
+			classMod: "",
+			uniqueName: "account_city",
+			labelVal: "",
+			inputType: "text",
+			inputClassMod: "",
+			placeholderVal: "Rabat",
+			val: ""
+		},
+		inputCountry: {
+			classMod: "",
+			uniqueName: "account_country",
+			labelVal: "",
+			inputType: "text",
+			inputClassMod: "",
+			placeholderVal: "Morocco",
+			val: ""
+		},
+		inputCompany: {
+			classMod: "",
+			uniqueName: "account_company",
+			labelVal: "",
+			inputType: "text",
+			inputClassMod: "",
+			placeholderVal: "devcom",
+			val: ""
+		},
+	};
+
 section#account.account
-  .c-grid
-    .account__wrapper
+	.c-grid
+		.account__wrapper
+			.account__wrapper-left
+				.account__wrapper-cover
+
+					form.c-form(action='' method='' autocomplete='off')
+
+						.account__header.account__header-0
+							div
+								p.account__header-title!= "Account Info"
+							div
+							button.account__header-btn.account__header-btn-0(type="submit" class="" title="")!= "Save changes"
+
+						.account__body
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "Email Address"
+								.account__input-right
+									span.account__input-info!= "btedeveloper@gmail.com"
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "Full Name"
+								.account__input-right
+									+formInput(dataFormObj.inputFullName)
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "Phone"
+								.account__input-right
+									+formInput(dataFormObj.inputPhone)
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "Address"
+								.account__input-right
+									+formInput(dataFormObj.inputAddress)
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "City"
+								.account__input-right
+									+formInput(dataFormObj.inputCity)
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "Country"
+								.account__input-right
+									+formInput(dataFormObj.inputCountry)
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "Company"
+								.account__input-right
+									+formInput(dataFormObj.inputCompany)
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "Created"
+								.account__input-right
+									span.account__input-info!= "2016-05-17 22:47:16"
+
+			.account__wrapper-right
+				.account__wrapper-cover
+
+					form.c-form(action='' method='' autocomplete='off')
+
+						.account__header.account__header-1
+							div
+								p.account__header-title!= "Password Reset"
+							div
+							button.account__header-btn.account__header-btn-1(type="submit" class="" title="")!= "Save changes"
+
+						.account__body
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "New Password"
+								.account__input-right
+									+formInput(dataFormObj.inputPassNew)
+
+							.account__input
+								.account__input-left
+									p.account__input-label!= "Repeat Password"
+								.account__input-right
+									+formInput(dataFormObj.inputPassRepeat)
 
 // SECTION account :: END

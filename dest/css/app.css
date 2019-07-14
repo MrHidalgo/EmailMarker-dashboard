@@ -2424,6 +2424,250 @@ picture {
   padding: 0 15px 30px;
 }
 
+/* line 4, src/scss/_components/account/_account.scss */
+.account__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: -webkit-calc((439px * 2) + 85px);
+  max-width: calc((439px * 2) + 85px);
+  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 4, src/scss/_components/account/_account.scss */
+  .account__wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 13, src/scss/_components/account/_account.scss */
+.account__wrapper-left, .account__wrapper-right {
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 13, src/scss/_components/account/_account.scss */
+  .account__wrapper-left, .account__wrapper-right {
+    width: 100%;
+  }
+}
+
+/* line 21, src/scss/_components/account/_account.scss */
+.account__wrapper-left {
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 21, src/scss/_components/account/_account.scss */
+  .account__wrapper-left {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+}
+
+/* line 29, src/scss/_components/account/_account.scss */
+.account__wrapper-right {
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 29, src/scss/_components/account/_account.scss */
+  .account__wrapper-right {
+    padding-left: 0;
+  }
+}
+
+/* line 35, src/scss/_components/account/_account.scss */
+.account__wrapper-right .account__wrapper-cover {
+  margin-left: auto;
+}
+
+/* line 40, src/scss/_components/account/_account.scss */
+.account__wrapper-cover {
+  width: 100%;
+  max-width: 439px;
+}
+
+/* line 46, src/scss/_components/account/_account.scss */
+.account__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 50px;
+  border-bottom: 1px solid #EEEFF3;
+}
+
+/* line 53, src/scss/_components/account/_account.scss */
+.account__header-title {
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
+/* line 59, src/scss/_components/account/_account.scss */
+.account__header-btn {
+  cursor: pointer;
+  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 110px;
+  height: 26px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #eeeff3;
+  color: #51c4fb;
+  -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 59, src/scss/_components/account/_account.scss */
+  .account__header-btn {
+    -webkit-border-radius: 25px;
+            border-radius: 25px;
+  }
+}
+
+/* line 77, src/scss/_components/account/_account.scss */
+.account__header-btn-0 {
+  background-color: #04c7ff;
+  border-color: #04c7ff;
+  -webkit-box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+          box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+  color: #ffffff;
+}
+
+/* line 83, src/scss/_components/account/_account.scss */
+.account__header-btn-0:hover {
+  background-color: #fff;
+  border-color: #eeeff3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #51c4fb;
+  -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 93, src/scss/_components/account/_account.scss */
+.account__header-btn-1:hover {
+  background-color: #04c7ff;
+  border-color: #04c7ff;
+  -webkit-box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+          box-shadow: 0 3px 3px rgba(83, 112, 151, 0.2);
+  color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 104, src/scss/_components/account/_account.scss */
+.account__body {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+/* line 109, src/scss/_components/account/_account.scss */
+.account__input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 49px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 109, src/scss/_components/account/_account.scss */
+  .account__input {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 118, src/scss/_components/account/_account.scss */
+.account__input:last-of-type {
+  padding-bottom: 0;
+}
+
+/* line 122, src/scss/_components/account/_account.scss */
+.account__input-left {
+  width: 100%;
+  max-width: 120px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 122, src/scss/_components/account/_account.scss */
+  .account__input-left {
+    max-width: 100%;
+    padding-bottom: 10px;
+  }
+}
+
+/* line 131, src/scss/_components/account/_account.scss */
+.account__input-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 137, src/scss/_components/account/_account.scss */
+.account__input-label {
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #537097;
+}
+
+/* line 143, src/scss/_components/account/_account.scss */
+.account__input-info {
+  padding-left: 20px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
 /* line 4, src/scss/_components/single-verification/_single-verification.scss */
 .singleVerification__form {
   display: -webkit-box;

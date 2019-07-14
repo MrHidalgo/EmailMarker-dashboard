@@ -6,7 +6,7 @@ PageList:
   ready: 90
 - file: account.html
   titleName: Account
-  ready: 1
+  ready: 90
 - file: single-verification-1.html
   titleName: Single Verification (SV)
   ready: 90
