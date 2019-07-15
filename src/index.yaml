@@ -36,7 +36,7 @@ PageList:
   ready: 90
 - file: api-2.html
   titleName: API - 2
-  ready: 1
+  ready: 90
 - file: deal-1.html
   titleName: Deal - 1
   ready: 1

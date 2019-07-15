@@ -33,11 +33,17 @@
 	@if $filename == book {
 		$char: "\E002";
 	}
-	@if $filename == corner {
+	@if $filename == close {
 		$char: "\E003";
 	}
-	@if $filename == file {
+	@if $filename == corner {
 		$char: "\E004";
+	}
+	@if $filename == file {
+		$char: "\E005";
+	}
+	@if $filename == trash {
+		$char: "\E006";
 	}
 
 	@return $char;
@@ -62,11 +68,19 @@
 	@include icon(book);
 
 }
+.icon-close {
+	@include icon(close);
+
+}
 .icon-corner {
 	@include icon(corner);
 
 }
 .icon-file {
 	@include icon(file);
+
+}
+.icon-trash {
+	@include icon(trash);
 
 }

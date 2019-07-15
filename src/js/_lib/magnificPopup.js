@@ -25,4 +25,8 @@ const initPopups = () => {
     }
   });
 
+  $('[popup-close-js]').on('click', (ev) => {
+		$.magnificPopup.close();
+	});
+
 };

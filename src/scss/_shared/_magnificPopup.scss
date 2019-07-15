@@ -1,18 +1,19 @@
-.modal {
+.c-modal {
   position: relative;
   width: 100%;
-  //max-width: 500px;
-  //min-height: 200px;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
 }
 
+.mfp-close {
+	display: none !important;
+}
 
 //
 // Zoom in...
 // ==========
-.mfp-zoom-in{
+.mfp-zoom-in {
   .mfp-with-anim {
     opacity: 0;
     transition: all 0.3s ease-in-out;
@@ -49,7 +50,7 @@
 //
 // Slide in {Change translate{X,Y} option for choose direction slide - top, left, bottom, right} - default slide in left.
 // ==========
-.mfp-slide-in{
+.mfp-slide-in {
   .mfp-with-anim {
     opacity: 0;
     transition: all 0.3s ease-in-out;

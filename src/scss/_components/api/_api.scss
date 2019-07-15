@@ -9,6 +9,30 @@
 		}
 	}
 
+	&--full {
+		.api {
+			&__wrapper {
+				@include adaptive(1023) {
+					flex-wrap: wrap;
+				}
+
+				&-left {
+					@include adaptive(1023) {
+						width: 100%;
+						padding-right: 0;
+						padding-bottom: 30px;
+					}
+				}
+
+				&-right {
+					@include adaptive(1023) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		@include adaptive(767) {
@@ -62,6 +86,9 @@
 			border-radius: 3px;
 			background: #fff;
 			box-shadow: 0px 0px 14px rgba(83, 112, 151, 0.06);
+			@include adaptive(1023) {
+				min-height: 0;
+			}
 		}
 
 		&-head {
@@ -89,7 +116,7 @@
 			width: 95px;
 			height: 26px;
 			border-radius: 3px;
-			background: #fff;
+			background-color: #fff;
 			border: 1px solid #eeeff3;
 			font-size: 12px;
 			letter-spacing: 0.01em;
@@ -102,6 +129,285 @@
 				background-color: #51c4fb;
 				color: #ffffff;
 				@include transition(border-color, background-color, color);
+			}
+		}
+
+		&-link {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 53px;
+			background-color: #ffffff;
+			border-right: 1px solid #eeeff3;
+			border-left: 1px solid #eeeff3;
+			border-bottom: 1px solid #eeeff3;
+			@include transition(background-color);
+
+			&:last-of-type {
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+			}
+
+			&.is-active {
+				background-color: #f9fbfc;
+				@include transition(background-color);
+			}
+
+			&:hover {
+				background-color: rgba(#f9fbfc, 0.75);
+				@include transition(background-color);
+			}
+
+			> div {
+				&:nth-of-type(1) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+					padding: 5px 20px;
+				}
+
+				&:nth-of-type(2) {
+					display: flex;
+					justify-content: center;
+					width: 36px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					border-left: 1px solid #eeeff3;
+				}
+
+				p,
+				span {
+					line-height: 1;
+					letter-spacing: 0.01em;
+				}
+
+				p {
+					font-size: 14px;
+					color: #000;
+				}
+
+				span {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	&__chart {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		border-radius: 3px;
+		background: #fff;
+		box-shadow: 0 0 14px rgba(83, 112, 151, 0.06);
+
+		&-head {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			min-height: 80px;
+			padding: 15px;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+				border-bottom: 1px solid #eeeff3;
+			}
+
+			&--right {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				@include adaptive(767) {
+					width: 100%;
+					padding-top: 24px;
+					justify-content: space-between;
+				}
+			}
+
+			p {
+				line-height: 1;
+				font-size: 14px;
+				letter-spacing: 0.01em;
+				color: #000;
+			}
+
+			span {
+				font-size: 12px;
+				letter-spacing: 0.01em;
+				color: #537097;
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				margin-left: 20px;
+				font-size: 14px;
+				letter-spacing: 0.01em;
+				color: #537097;
+				@include transition(color);
+				@include adaptive(767) {
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+				@include adaptive(374) {
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+
+				&.is-active {
+					color: #000000;
+				}
+
+				&:hover {
+					color: #000000;
+					@include transition(color);
+				}
+
+				&:first-of-type {
+					margin-left: 0;
+					@include adaptive(1023) {
+						margin-left: 10px;
+					}
+					@include adaptive(374) {
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+
+		&-body {
+			position: relative;
+			height: 100%;
+			padding: 30px 15px;
+			@include adaptive(767) {
+				height: auto;
+			}
+		}
+
+		&-footer {
+			display: flex;
+			min-height: 121px;
+			border-top: 1px solid #eeeff3;
+			@include adaptive(767) {
+				flex-direction: column-reverse;
+			}
+
+			> div {
+				&:nth-of-type(1) {
+					display: flex;
+					align-items: center;
+					width: 160px;
+					padding: 20px;
+					border-right: 1px solid #eeeff3;
+					@include adaptive(767) {
+						width: 100%;
+					}
+				}
+
+				&:nth-of-type(2) {
+					display: flex;
+					align-items: center;
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+					padding: 10px 20px;
+				}
+			}
+		}
+
+		&-ind {
+			&-left {
+				display: flex;
+				align-items: center;
+				width: 75px;
+			}
+
+			&-right {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+			}
+
+			> div {
+				display: flex;
+				align-items: center;
+			}
+
+			i {
+				width: 12px;
+				height: 12px;
+				margin-right: 5px;
+				border-radius: 50%;
+				background-color: #b9cfdb;
+
+				&.valid {
+					background-color: #41dcc7;
+				}
+
+				&.invalid {
+					background-color: #fe95b3;
+				}
+			}
+
+			p,
+			span {
+				font-size: 10px;
+			}
+		}
+
+		&-form {
+			width: 100%;
+
+			p {
+				padding-bottom: 10px;
+				font-size: 14px;
+				letter-spacing: 0.01em;
+			}
+
+			> div {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				@include adaptive(767) {
+					flex-wrap: wrap;
+				}
+			}
+
+			input {
+				outline: none;
+				width: calc(100% - (170px + 5px));
+				height: 49px;
+				padding: 0 20px;
+				border-radius: 6px;
+				border: 1px solid #eeeff3;
+				box-shadow: none;
+				@include adaptive(767) {
+					width: 100%;
+					margin-bottom: 5px;
+				}
+			}
+
+			button {
+				outline: none;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				max-width: 170px;
+				height: 49px;
+				border-radius: 3px;
+				border: none;
+				background-color: #04c7ff;
+				box-shadow: 0px 3px 3px rgba(223, 235, 242, 0.6);
+				font-size: 17px;
+				text-align: center;
+				color: #fff;
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 		}
 	}
