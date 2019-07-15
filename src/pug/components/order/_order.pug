@@ -1,0 +1,61 @@
+// SECTION order :: START
+
+mixin orderBox(className, date, orderID, package, price, status, invoice)
+	.order__box(class!= "order__box-" + className)
+		.order__box-inner.order__box-inner-0
+			p!= date
+		.order__box-inner.order__box-inner-1
+			p!= orderID
+		.order__box-inner.order__box-inner-2
+			p!= package
+		.order__box-inner.order__box-inner-3
+			p!= price
+		.order__box-inner.order__box-inner-4
+			p!= status
+		.order__box-inner.order__box-inner-5
+			if(invoice)
+				p!= invoice
+			else
+				a(href="#" class="" title="")
+					i.icon-font.icon-file
+
+section#order.order
+	.c-grid
+
+		.order__wrapper
+			.order__wrapper-left
+
+				.order__info
+					p.order__info-bell
+						i.icon-font.icon-bell
+					p.order__info-title!= "Friendly reminder :"
+					p.order__info-desc!= "Invoices are now being sent to you via email each month. Any invoices below are historic from July 2017."
+
+			.order__wrapper-right
+
+				.order__box-wrapper
+
+					.order__box-head
+						+orderBox('heading', 'Date', 'Order id', 'Package', 'Price', 'Status', 'Invoice')
+
+					.order__box-body
+						each val, idx in [1,2,3,4,5,6,7,8,9,10]
+							+orderBox(val, 'Aug 7, 2017', 'BLOOMTEC170909-6048-55572', '15,000 emails', '$36', 'Processed', '')
+
+				.order__tabs-wrapper
+					.order__tabs
+
+						a.order__tabs-left(href="#" class="" title="")
+							i.icon-font.icon-corner
+
+						.order__tabs-middle
+							a(href="#" class="" title="") Next
+
+						.order__tabs-right
+							a(href="#" class="" title="")!= "2"
+							a.is-active(href="#" class="" title="")!= "3"
+							a(href="#" class="" title="")!= "4"
+							a(href="#" class="" title="")!= "5"
+							a(href="#" class="" title="")!= "6"
+
+// SECTION order :: END

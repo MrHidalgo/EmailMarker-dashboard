@@ -27,8 +27,17 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == book {
+	@if $filename == bell {
 		$char: "\E001";
+	}
+	@if $filename == book {
+		$char: "\E002";
+	}
+	@if $filename == corner {
+		$char: "\E003";
+	}
+	@if $filename == file {
+		$char: "\E004";
 	}
 
 	@return $char;
@@ -45,7 +54,19 @@
 	}
 }
 
+.icon-bell {
+	@include icon(bell);
+
+}
 .icon-book {
 	@include icon(book);
+
+}
+.icon-corner {
+	@include icon(corner);
+
+}
+.icon-file {
+	@include icon(file);
 
 }
