@@ -3283,19 +3283,26 @@ picture {
   /* line 19, src/scss/_components/api/_api.scss */
   .api--full .api__wrapper-left {
     width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
     padding-right: 0;
     padding-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 27, src/scss/_components/api/_api.scss */
+  /* line 30, src/scss/_components/api/_api.scss */
   .api--full .api__wrapper-right {
     width: 100%;
+    -webkit-box-flex: unset;
+    -webkit-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
   }
 }
 
-/* line 36, src/scss/_components/api/_api.scss */
+/* line 40, src/scss/_components/api/_api.scss */
 .api__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3304,7 +3311,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 36, src/scss/_components/api/_api.scss */
+  /* line 40, src/scss/_components/api/_api.scss */
   .api__wrapper {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -3312,21 +3319,21 @@ picture {
   }
 }
 
-/* line 42, src/scss/_components/api/_api.scss */
+/* line 46, src/scss/_components/api/_api.scss */
 .api__wrapper-left {
   width: 335px;
   padding-right: 35px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 42, src/scss/_components/api/_api.scss */
+  /* line 46, src/scss/_components/api/_api.scss */
   .api__wrapper-left {
     width: 100%;
     padding-right: 0;
   }
 }
 
-/* line 51, src/scss/_components/api/_api.scss */
+/* line 55, src/scss/_components/api/_api.scss */
 .api__wrapper-right {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -3336,7 +3343,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 58, src/scss/_components/api/_api.scss */
+/* line 62, src/scss/_components/api/_api.scss */
 .api__welcome {
   width: 100%;
   max-width: -webkit-calc(314px + 195px);
@@ -3344,14 +3351,14 @@ picture {
   padding-top: 20px;
 }
 
-/* line 63, src/scss/_components/api/_api.scss */
+/* line 67, src/scss/_components/api/_api.scss */
 .api__welcome-img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* line 69, src/scss/_components/api/_api.scss */
+/* line 73, src/scss/_components/api/_api.scss */
 .api__welcome-text {
   width: 100%;
   max-width: 314px;
@@ -3363,7 +3370,7 @@ picture {
   color: #b9cfdb;
 }
 
-/* line 82, src/scss/_components/api/_api.scss */
+/* line 86, src/scss/_components/api/_api.scss */
 .api__list-wrapper {
   overflow: hidden;
   width: 100%;
@@ -3376,13 +3383,13 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 82, src/scss/_components/api/_api.scss */
+  /* line 86, src/scss/_components/api/_api.scss */
   .api__list-wrapper {
     min-height: 0;
   }
 }
 
-/* line 94, src/scss/_components/api/_api.scss */
+/* line 98, src/scss/_components/api/_api.scss */
 .api__list-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3401,19 +3408,19 @@ picture {
   border-bottom: 1px solid #EEEFF3;
 }
 
-/* line 103, src/scss/_components/api/_api.scss */
+/* line 107, src/scss/_components/api/_api.scss */
 .api__list-body {
   min-height: -webkit-calc(100% - 56px);
   min-height: calc(100% - 56px);
 }
 
-/* line 107, src/scss/_components/api/_api.scss */
+/* line 111, src/scss/_components/api/_api.scss */
 .api__list-title {
   font-size: 14px;
   letter-spacing: 0.01em;
 }
 
-/* line 112, src/scss/_components/api/_api.scss */
+/* line 116, src/scss/_components/api/_api.scss */
 .api__list-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3442,7 +3449,7 @@ picture {
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 127, src/scss/_components/api/_api.scss */
+/* line 131, src/scss/_components/api/_api.scss */
 .api__list-btn:hover {
   border-color: #51c4fb;
   background-color: #51c4fb;
@@ -3452,7 +3459,7 @@ picture {
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 135, src/scss/_components/api/_api.scss */
+/* line 139, src/scss/_components/api/_api.scss */
 .api__list-link {
   cursor: pointer;
   display: -webkit-box;
@@ -3474,7 +3481,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 147, src/scss/_components/api/_api.scss */
+/* line 151, src/scss/_components/api/_api.scss */
 .api__list-link:last-of-type {
   -webkit-border-bottom-left-radius: 3px;
           border-bottom-left-radius: 3px;
@@ -3482,7 +3489,7 @@ picture {
           border-bottom-right-radius: 3px;
 }
 
-/* line 152, src/scss/_components/api/_api.scss */
+/* line 156, src/scss/_components/api/_api.scss */
 .api__list-link.is-active {
   background-color: #f9fbfc;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -3490,7 +3497,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 157, src/scss/_components/api/_api.scss */
+/* line 161, src/scss/_components/api/_api.scss */
 .api__list-link:hover {
   background-color: rgba(249, 251, 252, 0.75);
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -3498,7 +3505,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 163, src/scss/_components/api/_api.scss */
+/* line 167, src/scss/_components/api/_api.scss */
 .api__list-link > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -3509,7 +3516,7 @@ picture {
   padding: 5px 20px;
 }
 
-/* line 170, src/scss/_components/api/_api.scss */
+/* line 174, src/scss/_components/api/_api.scss */
 .api__list-link > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3525,25 +3532,25 @@ picture {
   border-left: 1px solid #eeeff3;
 }
 
-/* line 179, src/scss/_components/api/_api.scss */
+/* line 183, src/scss/_components/api/_api.scss */
 .api__list-link > div p,
 .api__list-link > div span {
   line-height: 1;
   letter-spacing: 0.01em;
 }
 
-/* line 185, src/scss/_components/api/_api.scss */
+/* line 189, src/scss/_components/api/_api.scss */
 .api__list-link > div p {
   font-size: 14px;
   color: #000;
 }
 
-/* line 190, src/scss/_components/api/_api.scss */
+/* line 194, src/scss/_components/api/_api.scss */
 .api__list-link > div span {
   font-size: 12px;
 }
 
-/* line 197, src/scss/_components/api/_api.scss */
+/* line 201, src/scss/_components/api/_api.scss */
 .api__chart {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3564,7 +3571,7 @@ picture {
           box-shadow: 0 0 14px rgba(83, 112, 151, 0.06);
 }
 
-/* line 207, src/scss/_components/api/_api.scss */
+/* line 211, src/scss/_components/api/_api.scss */
 .api__chart-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3583,7 +3590,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 207, src/scss/_components/api/_api.scss */
+  /* line 211, src/scss/_components/api/_api.scss */
   .api__chart-head {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -3592,7 +3599,7 @@ picture {
   }
 }
 
-/* line 218, src/scss/_components/api/_api.scss */
+/* line 222, src/scss/_components/api/_api.scss */
 .api__chart-head--right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3609,7 +3616,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 218, src/scss/_components/api/_api.scss */
+  /* line 222, src/scss/_components/api/_api.scss */
   .api__chart-head--right {
     width: 100%;
     padding-top: 24px;
@@ -3620,7 +3627,7 @@ picture {
   }
 }
 
-/* line 229, src/scss/_components/api/_api.scss */
+/* line 233, src/scss/_components/api/_api.scss */
 .api__chart-head p {
   line-height: 1;
   font-size: 14px;
@@ -3628,14 +3635,14 @@ picture {
   color: #000;
 }
 
-/* line 236, src/scss/_components/api/_api.scss */
+/* line 240, src/scss/_components/api/_api.scss */
 .api__chart-head span {
   font-size: 12px;
   letter-spacing: 0.01em;
   color: #537097;
 }
 
-/* line 242, src/scss/_components/api/_api.scss */
+/* line 246, src/scss/_components/api/_api.scss */
 .api__chart-head a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3655,7 +3662,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 242, src/scss/_components/api/_api.scss */
+  /* line 246, src/scss/_components/api/_api.scss */
   .api__chart-head a {
     margin-left: 10px;
     margin-right: 10px;
@@ -3663,19 +3670,19 @@ picture {
 }
 
 @media screen and (max-width: 374px) {
-  /* line 242, src/scss/_components/api/_api.scss */
+  /* line 246, src/scss/_components/api/_api.scss */
   .api__chart-head a {
     margin-left: 5px;
     margin-right: 5px;
   }
 }
 
-/* line 259, src/scss/_components/api/_api.scss */
+/* line 263, src/scss/_components/api/_api.scss */
 .api__chart-head a.is-active {
   color: #000000;
 }
 
-/* line 263, src/scss/_components/api/_api.scss */
+/* line 267, src/scss/_components/api/_api.scss */
 .api__chart-head a:hover {
   color: #000000;
   -webkit-transition: color 0.3s ease-in-out;
@@ -3683,26 +3690,26 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 268, src/scss/_components/api/_api.scss */
+/* line 272, src/scss/_components/api/_api.scss */
 .api__chart-head a:first-of-type {
   margin-left: 0;
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 268, src/scss/_components/api/_api.scss */
+  /* line 272, src/scss/_components/api/_api.scss */
   .api__chart-head a:first-of-type {
     margin-left: 10px;
   }
 }
 
 @media screen and (max-width: 374px) {
-  /* line 268, src/scss/_components/api/_api.scss */
+  /* line 272, src/scss/_components/api/_api.scss */
   .api__chart-head a:first-of-type {
     margin-left: 5px;
   }
 }
 
-/* line 280, src/scss/_components/api/_api.scss */
+/* line 284, src/scss/_components/api/_api.scss */
 .api__chart-body {
   position: relative;
   height: 100%;
@@ -3710,13 +3717,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 280, src/scss/_components/api/_api.scss */
+  /* line 284, src/scss/_components/api/_api.scss */
   .api__chart-body {
     height: auto;
   }
 }
 
-/* line 289, src/scss/_components/api/_api.scss */
+/* line 293, src/scss/_components/api/_api.scss */
 .api__chart-footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3727,17 +3734,17 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 289, src/scss/_components/api/_api.scss */
+  /* line 293, src/scss/_components/api/_api.scss */
   .api__chart-footer {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-/* line 298, src/scss/_components/api/_api.scss */
+/* line 302, src/scss/_components/api/_api.scss */
 .api__chart-footer > div:nth-of-type(1) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3753,13 +3760,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 298, src/scss/_components/api/_api.scss */
+  /* line 302, src/scss/_components/api/_api.scss */
   .api__chart-footer > div:nth-of-type(1) {
     width: 100%;
+    padding: 20px 10px;
   }
 }
 
-/* line 309, src/scss/_components/api/_api.scss */
+/* line 314, src/scss/_components/api/_api.scss */
 .api__chart-footer > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3778,7 +3786,22 @@ picture {
   padding: 10px 20px;
 }
 
-/* line 321, src/scss/_components/api/_api.scss */
+@media screen and (max-width: 767px) {
+  /* line 325, src/scss/_components/api/_api.scss */
+  .api__chart-ind {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
+/* line 332, src/scss/_components/api/_api.scss */
 .api__chart-ind-left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3791,7 +3814,14 @@ picture {
   width: 75px;
 }
 
-/* line 327, src/scss/_components/api/_api.scss */
+@media screen and (max-width: 767px) {
+  /* line 332, src/scss/_components/api/_api.scss */
+  .api__chart-ind-left {
+    width: auto;
+  }
+}
+
+/* line 341, src/scss/_components/api/_api.scss */
 .api__chart-ind-right {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -3801,7 +3831,20 @@ picture {
   max-width: 100%;
 }
 
-/* line 333, src/scss/_components/api/_api.scss */
+@media screen and (max-width: 767px) {
+  /* line 341, src/scss/_components/api/_api.scss */
+  .api__chart-ind-right {
+    -webkit-box-flex: unset;
+    -webkit-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    min-width: unset;
+    max-width: unset;
+    padding-right: 10px;
+  }
+}
+
+/* line 353, src/scss/_components/api/_api.scss */
 .api__chart-ind > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3813,7 +3856,20 @@ picture {
           align-items: center;
 }
 
-/* line 338, src/scss/_components/api/_api.scss */
+@media screen and (max-width: 767px) {
+  /* line 353, src/scss/_components/api/_api.scss */
+  .api__chart-ind > div {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    max-width: -webkit-calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+}
+
+/* line 363, src/scss/_components/api/_api.scss */
 .api__chart-ind i {
   width: 12px;
   height: 12px;
@@ -3823,36 +3879,52 @@ picture {
   background-color: #b9cfdb;
 }
 
-/* line 345, src/scss/_components/api/_api.scss */
+/* line 370, src/scss/_components/api/_api.scss */
 .api__chart-ind i.valid {
   background-color: #41dcc7;
 }
 
-/* line 349, src/scss/_components/api/_api.scss */
+/* line 374, src/scss/_components/api/_api.scss */
 .api__chart-ind i.invalid {
   background-color: #fe95b3;
 }
 
-/* line 354, src/scss/_components/api/_api.scss */
+/* line 379, src/scss/_components/api/_api.scss */
 .api__chart-ind p,
 .api__chart-ind span {
   font-size: 10px;
 }
 
-/* line 360, src/scss/_components/api/_api.scss */
+@media screen and (max-width: 767px) {
+  /* line 384, src/scss/_components/api/_api.scss */
+  .api__chart-ind span {
+    position: relative;
+    top: -1px;
+  }
+}
+
+/* line 392, src/scss/_components/api/_api.scss */
 .api__chart-form {
   width: 100%;
 }
 
-/* line 363, src/scss/_components/api/_api.scss */
+/* line 395, src/scss/_components/api/_api.scss */
 .api__chart-form p {
   padding-bottom: 10px;
   font-size: 14px;
   letter-spacing: 0.01em;
 }
 
-/* line 369, src/scss/_components/api/_api.scss */
+@media screen and (max-width: 767px) {
+  /* line 395, src/scss/_components/api/_api.scss */
+  .api__chart-form p {
+    display: none;
+  }
+}
+
+/* line 404, src/scss/_components/api/_api.scss */
 .api__chart-form > div {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3865,7 +3937,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 369, src/scss/_components/api/_api.scss */
+  /* line 404, src/scss/_components/api/_api.scss */
   .api__chart-form > div {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -3873,7 +3945,7 @@ picture {
   }
 }
 
-/* line 378, src/scss/_components/api/_api.scss */
+/* line 414, src/scss/_components/api/_api.scss */
 .api__chart-form input {
   outline: none;
   width: -webkit-calc(100% - (170px + 5px));
@@ -3888,14 +3960,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 378, src/scss/_components/api/_api.scss */
+  /* line 414, src/scss/_components/api/_api.scss */
   .api__chart-form input {
     width: 100%;
-    margin-bottom: 5px;
+    padding-right: 125px;
   }
 }
 
-/* line 392, src/scss/_components/api/_api.scss */
+/* line 428, src/scss/_components/api/_api.scss */
 .api__chart-form button {
   outline: none;
   cursor: pointer;
@@ -3926,9 +3998,23 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 392, src/scss/_components/api/_api.scss */
+  /* line 428, src/scss/_components/api/_api.scss */
   .api__chart-form button {
-    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 10px;
+    width: 95px;
+    height: 26px;
+    -webkit-border-radius: 13px;
+            border-radius: 13px;
+    background-color: #51c4fb;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #fff;
   }
 }
 

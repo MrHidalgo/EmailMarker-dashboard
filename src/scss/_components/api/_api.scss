@@ -19,6 +19,9 @@
 				&-left {
 					@include adaptive(1023) {
 						width: 100%;
+						max-width: 300px;
+						margin-left: auto;
+						margin-right: auto;
 						padding-right: 0;
 						padding-bottom: 30px;
 					}
@@ -27,6 +30,7 @@
 				&-right {
 					@include adaptive(1023) {
 						width: 100%;
+						flex: unset;
 					}
 				}
 			}
@@ -291,7 +295,7 @@
 			min-height: 121px;
 			border-top: 1px solid #eeeff3;
 			@include adaptive(767) {
-				flex-direction: column-reverse;
+				flex-direction: column;
 			}
 
 			> div {
@@ -303,6 +307,7 @@
 					border-right: 1px solid #eeeff3;
 					@include adaptive(767) {
 						width: 100%;
+						padding: 20px 10px;
 					}
 				}
 
@@ -318,21 +323,41 @@
 		}
 
 		&-ind {
+			@include adaptive(767) {
+				display: flex;
+				align-items: center;
+				width: 100%;
+			}
+
 			&-left {
 				display: flex;
 				align-items: center;
 				width: 75px;
+				@include adaptive(767) {
+					width: auto;
+				}
 			}
 
 			&-right {
 				flex: 1;
 				min-width: 1px;
 				max-width: 100%;
+				@include adaptive(767) {
+					flex: unset;
+					min-width: unset;
+					max-width: unset;
+					padding-right: 10px;
+				}
 			}
 
 			> div {
 				display: flex;
 				align-items: center;
+				@include adaptive(767) {
+					justify-content: space-between;
+					width: 100%;
+					max-width: calc(100% / 3);
+				}
 			}
 
 			i {
@@ -355,6 +380,13 @@
 			span {
 				font-size: 10px;
 			}
+
+			span {
+				@include adaptive(767) {
+					position: relative;
+					top: -1px;
+				}
+			}
 		}
 
 		&-form {
@@ -364,9 +396,13 @@
 				padding-bottom: 10px;
 				font-size: 14px;
 				letter-spacing: 0.01em;
+				@include adaptive(767) {
+					display: none;
+				}
 			}
 
 			> div {
+				position: relative;
 				display: flex;
 				justify-content: space-between;
 				width: 100%;
@@ -385,7 +421,7 @@
 				box-shadow: none;
 				@include adaptive(767) {
 					width: 100%;
-					margin-bottom: 5px;
+					padding-right: 125px;
 				}
 			}
 
@@ -406,7 +442,18 @@
 				text-align: center;
 				color: #fff;
 				@include adaptive(767) {
-					max-width: 100%;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 10px;
+					width: 95px;
+					height: 26px;
+					border-radius: 13px;
+					background-color: #51c4fb;
+					font-size: 12px;
+					letter-spacing: 0.01em;
+					text-align: center;
+					color: #fff;
 				}
 			}
 		}
