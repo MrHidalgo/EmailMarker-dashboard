@@ -867,7 +867,7 @@ picture {
 @media screen and (max-width: 767px) {
   /* line 306, src/scss/_shared/_common.scss */
   .heading {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 }
 
@@ -3058,6 +3058,163 @@ picture {
     -webkit-border-radius: 25px;
             border-radius: 25px;
   }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 5, src/scss/_components/api/_api.scss */
+  .api--empty .api__wrapper-right {
+    display: none;
+  }
+}
+
+/* line 12, src/scss/_components/api/_api.scss */
+.api__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 12, src/scss/_components/api/_api.scss */
+  .api__wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 18, src/scss/_components/api/_api.scss */
+.api__wrapper-left {
+  width: 335px;
+  padding-right: 35px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 18, src/scss/_components/api/_api.scss */
+  .api__wrapper-left {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* line 27, src/scss/_components/api/_api.scss */
+.api__wrapper-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 34, src/scss/_components/api/_api.scss */
+.api__welcome {
+  width: 100%;
+  max-width: -webkit-calc(314px + 195px);
+  max-width: calc(314px + 195px);
+  padding-top: 20px;
+}
+
+/* line 39, src/scss/_components/api/_api.scss */
+.api__welcome-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 45, src/scss/_components/api/_api.scss */
+.api__welcome-text {
+  width: 100%;
+  max-width: 314px;
+  margin-left: auto;
+  padding-top: 25px;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #b9cfdb;
+}
+
+/* line 58, src/scss/_components/api/_api.scss */
+.api__list-wrapper {
+  overflow: hidden;
+  width: 100%;
+  min-height: 575px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 14px rgba(83, 112, 151, 0.06);
+          box-shadow: 0px 0px 14px rgba(83, 112, 151, 0.06);
+}
+
+/* line 67, src/scss/_components/api/_api.scss */
+.api__list-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 56px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #EEEFF3;
+}
+
+/* line 76, src/scss/_components/api/_api.scss */
+.api__list-body {
+  min-height: -webkit-calc(100% - 56px);
+  min-height: calc(100% - 56px);
+}
+
+/* line 80, src/scss/_components/api/_api.scss */
+.api__list-title {
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+/* line 85, src/scss/_components/api/_api.scss */
+.api__list-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95px;
+  height: 26px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #fff;
+  border: 1px solid #eeeff3;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  color: #51c4fb;
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* line 100, src/scss/_components/api/_api.scss */
+.api__list-btn:hover {
+  border-color: #51c4fb;
+  background-color: #51c4fb;
+  color: #ffffff;
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* line 4, src/scss/_components/order/_order.scss */
