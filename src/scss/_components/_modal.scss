@@ -13,6 +13,25 @@
 		font-size: 14px;
 	}
 
+	&__packageConfirm {
+		overflow: hidden;
+		width: 100%;
+		max-width: 628px;
+		min-height: 167px;
+		padding: 20px;
+		border-radius: 3px;
+		background: #fff;
+		box-shadow: 0px 0px 30px rgba(83, 112, 151, 0.24);
+
+		.c-modal {
+			&__body {
+				display: flex;
+				justify-content: center;
+				padding-top: 15px;
+			}
+		}
+	}
+
 	&__apiRemove {
 		overflow: hidden;
 		width: 100%;

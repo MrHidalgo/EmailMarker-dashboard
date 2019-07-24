@@ -42,7 +42,7 @@ PageList:
   ready: 90
 - file: buy.html
   titleName: Buy
-  ready: 1
+  ready: 90
 - file: order.html
   titleName: Order
   ready: 90

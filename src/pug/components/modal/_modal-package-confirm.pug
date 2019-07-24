@@ -1,0 +1,30 @@
+// SECTION modal api remove :: START
+
+mixin modalContent()
+	a.c-modal__close(href="#" class="" title="" popup-close-js)
+		i.icon-font.icon-close
+	.c-modal__header
+		p Package confirmation
+	.c-modal__body
+		.deal__box.is-choose
+			.deal__box-left
+				.deal__box-icon
+					img(src="img/mail.svg" alt="" title="")
+					img(src="img/mail-hover.svg" alt="" title="")
+
+			.deal__box-middle
+
+				div
+					h2 700,000
+					p Email verifications
+				div
+					span Price
+					h3 $497
+
+			.deal__box-right
+				a.deal__box-btn(href="#" class="" title="")!= "Buy Now"
+
+
++modal('packageConfirm', 'packageConfirm', 'modalContent')
+
+// SECTION modal api remove :: END
