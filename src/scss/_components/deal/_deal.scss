@@ -1,0 +1,250 @@
+// SECTION deal :: START
+
+.deal {
+	&__wrapper {
+		display: flex;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
+
+		&-left {
+			width: 335px;
+			padding-right: 35px;
+			@include adaptive(767) {
+				width: 100%;
+				padding-right: 0;
+				padding-bottom: 35px;
+			}
+		}
+
+		&-right {
+			width: 100%;
+			max-width: 798px;
+			@include adaptive(767) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	&__info {
+		&-wrapper {
+			padding-bottom: 29px;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		&-title,
+		&-subtitle,
+		&-text {
+			letter-spacing: 0.01em;
+		}
+
+		&-title {
+			padding-bottom: 39px;
+			font-size: 14px;
+			color: #000;
+		}
+
+		&-subtitle {
+			font-size: 14px;
+		}
+
+		&-text {
+			font-size: 12px;
+			color: #b9cfdb;
+		}
+	}
+
+	&__box {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 405px;
+		min-height: 85px;
+		@include adaptive(767) {
+			min-height: 140px;
+		}
+
+		&:hover {
+			&:after {
+				background-color: #fff;
+				box-shadow: 0 5px 13px rgba(98, 118, 203, 0.15);
+				@include transition(background-color, box-shadow);
+			}
+
+			.deal__box {
+				&-icon {
+					background-color: #6c63ff;
+					@include transition(background-color);
+
+
+					img {
+						&:nth-of-type(2) {
+							opacity: 1;
+							@include transition(opacity);
+						}
+					}
+				}
+
+				&-btn {
+					background-color: #6c63ff;
+					@include transition(background-color);
+				}
+			}
+		}
+
+		&:after {
+			content: '';
+			z-index: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: calc(100% - 44px);
+			height: 100%;
+			border-radius: 3px;
+			@include transition(background-color, box-shadow);
+			@include adaptive(767) {
+				width: calc(100% - 62px);
+				background-color: #fff;
+				box-shadow: 0 5px 13px rgba(98, 118, 203, 0.15);
+			}
+		}
+
+		> * {
+			z-index: 2;
+			position: relative;
+		}
+
+		&-left {
+			display: flex;
+			justify-content: center;
+			width: 100px;
+			@include adaptive(413) {
+				width: 80px;
+			}
+		}
+
+		&-middle {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+			padding-right: 30px;
+			@include adaptive(767) {
+				align-items: flex-start;
+				flex-direction: column;
+			}
+
+			> div {
+				&:nth-of-type(2) {
+					text-align: right;
+					@include adaptive(767) {
+						padding-top: 20px;
+						text-align: left;
+					}
+				}
+			}
+
+			h2 {
+				font-size: 17px;
+				line-height: 24px;
+				color: #2d3136;
+			}
+
+			h3 {
+				font-weight: 600;
+				font-size: 17px;
+				line-height: 24px;
+				color: #273951;
+			}
+
+			p,
+			span {
+				display: block;
+				font-size: 11px;
+				color: #818992;
+			}
+		}
+
+		&-right {
+			width: 88px;
+			@include adaptive(767) {
+				width: 125px;
+			}
+			@include adaptive(413) {
+				width: 100px;
+			}
+		}
+
+		&-icon {
+			position: relative;
+			width: 50px;
+			height: 50px;
+			border-radius: 3px;
+			background-color: #f4f9fc;
+			@include transition(background-color);
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				&:nth-of-type(2) {
+					opacity: 0;
+					@include transition(opacity);
+				}
+			}
+		}
+
+		&-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 88px;
+			height: 32px;
+			border-radius: 3px;
+			background-color: #04c7ff;
+			box-shadow: 0 3px 3px rgba(52, 35, 108, 0.2);
+			font-weight: bold;
+			font-size: 14px;
+			color: #fff;
+			@include transition(background-color);
+			@include adaptive(767) {
+				width: 125px;
+				height: 49px;
+				border-radius: 2em;
+				font-weight: normal;
+				font-size: 13px;
+			}
+			@include adaptive(413) {
+				width: 100px;
+			}
+		}
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 628px;
+			height: 185px;
+			padding: 30px;
+			border-radius: 6px;
+			background: #fff;
+			box-shadow: 0 0 2px rgba(83, 112, 151, 0.06);
+			@include adaptive(767) {
+				padding: 0;
+				box-shadow: none;
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+// SECTION deal :: END

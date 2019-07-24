@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="20.893" viewBox="0 0 30 20.893">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="30" height="20.893" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="mail-hover" clip-path="url(#clip-path)">
+    <g id="Group">
+      <path id="Shape" d="M0,0V20.893H30V0Z" fill="#9f81ff"/>
+      <path id="Shape-2" data-name="Shape" d="M16.588.987a2.441,2.441,0,0,1-3.177,0L12.294,0C8.8,3.122,0,10.037,0,10.037H30S21.2,3.122,17.706,0Z" transform="translate(0 10.856)" fill="#aa90ff"/>
+      <path id="Shape-3" data-name="Shape" d="M0,0,13.412,11.843a2.441,2.441,0,0,0,3.177,0L30,0Z" fill="#9372ff"/>
+    </g>
+  </g>
+</svg>
