@@ -1,0 +1,42 @@
+// SECTION bulk integration :: START
+
+.bulk__integration
+	.bulk__integration-head
+		p Integration
+	.bulk__integration-body
+		-
+			let arrName = [
+				'Mailchimp',
+				'Mailerlite',
+				'Sendgrid',
+				'Campaign Monitor',
+				'Active Campaign',
+				'Benchmark',
+				'ConvertFox',
+				'HubSpot',
+				'Aweber'
+			];
+			let arrImageName = [
+				'img-mailchimp',
+				'img-mailerlite',
+				'img-sendgrid',
+				'img-campaignMonitor',
+				'img-activeCampaign',
+				'img-benchmark',
+				'img-convertFox',
+				'img-hubSpot',
+				'img-aweber'
+			];
+
+		ul.bulk__integration-list
+			each val, idx in arrName
+				li
+					a(href="#integrationList" class="" title="" data-effect="mfp-zoom-in" popup-js)
+						div
+							img(src='img/' + arrImageName[idx] + '.png' srcset="img/" + arrImageName[idx] + "@2x.png 2x" alt="" title="")
+						div
+							p!= val
+
+	.bulk__integration-footer
+
+// SECTION bulk integration :: END

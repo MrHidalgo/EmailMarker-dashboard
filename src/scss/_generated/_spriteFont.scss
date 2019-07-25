@@ -27,23 +27,26 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == bell {
+	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == book {
+	@if $filename == bell {
 		$char: "\E002";
 	}
-	@if $filename == close {
+	@if $filename == book {
 		$char: "\E003";
 	}
-	@if $filename == corner {
+	@if $filename == close {
 		$char: "\E004";
 	}
-	@if $filename == file {
+	@if $filename == corner {
 		$char: "\E005";
 	}
-	@if $filename == trash {
+	@if $filename == file {
 		$char: "\E006";
+	}
+	@if $filename == trash {
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -60,6 +63,10 @@
 	}
 }
 
+.icon-arrow {
+	@include icon(arrow);
+
+}
 .icon-bell {
 	@include icon(bell);
 

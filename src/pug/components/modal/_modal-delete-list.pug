@@ -1,0 +1,15 @@
+// SECTION modal delete bulk list :: START
+
+mixin modalContent()
+	a.c-modal__close(href="#" class="" title="" popup-close-js)
+		i.icon-font.icon-close
+	.c-modal__header
+		p Delete List
+	.c-modal__body
+		p Are you sure ! you want to delete this List ?
+	.c-modal__footer
+		a(href="#" class="" title="")!= "Delete"
+
++modal('deleteList', 'deleteList', 'modalContent')
+
+// SECTION modal delete bulk list :: END

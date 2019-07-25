@@ -112,10 +112,11 @@ var initWebFontLoader = function initWebFontLoader() {
  * ============================================= */
 	var initClickBody = function initClickBody() {
 		$('body').on('click', function (e) {
-			var className = ".profile__dropdown";
+			var className = ".profile__dropdown, .c-modal__dropdown";
 
 			if (!$(e.target).closest(className).length) {
 				$('.profile__dropdown').removeClass('is-open');
+				$('.c-modal__dropdown').removeClass('is-open');
 			}
 		});
 	};
@@ -123,6 +124,12 @@ var initWebFontLoader = function initWebFontLoader() {
 	var initHeaderProfileDropdown = function initHeaderProfileDropdown() {
 		$('[dropdown-profile-js]').on('click', function (ev) {
 			$(ev.currentTarget).closest('.profile__dropdown').toggleClass('is-open');
+		});
+	};
+
+	var initModalDropdown = function initModalDropdown() {
+		$('[dropdown-c-modal-js]').on('click', function (ev) {
+			$(ev.currentTarget).closest('.c-modal__dropdown').toggleClass('is-open');
 		});
 	};
 
@@ -170,6 +177,7 @@ var initWebFontLoader = function initWebFontLoader() {
 		initHeaderProfileDropdown();
 		initHeaderNavBtn();
 		initMobileMenu();
+		initModalDropdown();
 		// ==========================================
 	};
 	initNative();

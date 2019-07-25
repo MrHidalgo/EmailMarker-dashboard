@@ -1,0 +1,34 @@
+// SECTION modal integration list :: START
+
+mixin modalContent()
+	a.c-modal__close(href="#" class="" title="" popup-close-js)
+		i.icon-font.icon-close
+	.c-modal__header
+		div
+			p MailChimp List
+		div
+			.c-modal__dropdown
+				.c-modal__dropdown-btn(dropdown-c-modal-js)
+					p Development
+					i.c-modal__dropdown-corner
+
+				.c-modal__dropdown-container
+					a(href="#" class="" title="")!= "Some action"
+					a(href="#" class="" title="")!= "Action"
+
+	.c-modal__body
+
+		.c-modal__list-wrapper
+			each val, idx in [1,2,3,4,5]
+				.c-modal__list
+					.c-modal__list-left
+						p _myList-2.csv
+						span 166
+					.c-modal__list-right
+						a.c-modal__list-import(href="#" class="" title="") Import List
+						a.c-modal__list-remove(href="#" class="" title="")
+							i.icon-font.icon-trash
+
++modal('integrationList', 'integrationList', 'modalContent')
+
+// SECTION modal integration list :: END

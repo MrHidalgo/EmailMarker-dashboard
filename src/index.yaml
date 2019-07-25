@@ -23,13 +23,13 @@ PageList:
   titleName: SV - Accept All
   ready: 90
 - file: bulk-verification-1.html
-  titleName: Bulk Verification - 2
+  titleName: Bulk Verification - 1
   ready: 1
 - file: bulk-verification-2.html
-  titleName: Bulk Verification - 3
+  titleName: Bulk Verification - 2
   ready: 1
 - file: bulk-verification-3.html
-  titleName: Bulk Verification - 4
+  titleName: Bulk Verification - 3
   ready: 1
 - file: api-1.html
   titleName: API - 1

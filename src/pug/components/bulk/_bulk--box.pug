@@ -1,0 +1,76 @@
+// SECTION bulk box :: START
+
+-
+	let arrData = [
+		{
+			classMod: 'cleaned',
+			indVal: 'Cleaned',
+		},
+		{
+			classMod: 'unprocessed',
+			indVal: 'Unprocessed',
+		},
+		{
+			classMod: 'cleaned',
+			indVal: 'Cleaned',
+		},
+		{
+			classMod: 'cleaned',
+			indVal: 'Cleaned',
+		},
+		{
+			classMod: 'processing',
+			indVal: 'Processing',
+		},
+		{
+			classMod: 'cleaned',
+			indVal: 'Cleaned',
+		},
+		{
+			classMod: 'cleaned',
+			indVal: 'Cleaned',
+		},
+		{
+			classMod: 'cleaned',
+			indVal: 'Cleaned',
+		},
+		{
+			classMod: 'cleaned',
+			indVal: 'Cleaned',
+		},
+		{
+			classMod: 'cleaned',
+			indVal: 'Cleaned',
+		},
+	];
+
+.bulk__box-wrapper
+
+	each val, idx in arrData
+		.bulk__box(class!= "bulk__box--" + arrData[idx].classMod)
+
+			.bulk__box-col.bulk__box-col--1.bulk__box--ind
+
+				i
+				p!= arrData[idx].indVal
+
+			.bulk__box-col.bulk__box-col--2.bulk__box--name
+				p _myList-2.csv
+				span 166
+
+			.bulk__box-col.bulk__box-col--3.bulk__box--date
+				h4
+					p Uploaded :
+					span 12/19/17  -  11:37 PM
+
+			.bulk__box-col.bulk__box-col--4.bulk__box--action
+				a(href="#deleteList" class="" title="" data-effect="mfp-zoom-in" popup-js)
+					i.icon-font.icon-trash
+
+			.bulk__box-col.bulk__box-col--5.bulk__box--progress
+
+				p 75%
+				span
+					i(style="width: 75%;")
+
+// SECTION bulk box :: END
